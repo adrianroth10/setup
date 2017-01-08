@@ -27,8 +27,5 @@ done
 
 sudo apt-get autoremove -y
 
-# Other programs to install and stuff to do
-echo Install matlab and slack slack
-
 # Kill the music
 pkill vlc
