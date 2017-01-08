@@ -7,6 +7,7 @@ git clone https://github.com/opencv/opencv_contrib.git ~/.opencv_contrib
 rm -rf ~./opencv_contriv/modules/matlab
 cd ~/.opencv
 mkdir -p release
+# Changing one line in CMakeLists.txt to add contrib modules
 sed '463s/.*/set(OPENCV_EXTRA_MODULES_PATH "~\/.opencv_contrib\/modules\/" CACHE PATH "Where to look for additional OpenCV modules")/' CMakeLists.txt > temp
 mv temp CMakeLists.txt
 cd release

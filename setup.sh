@@ -1,33 +1,34 @@
 #!/bin/bash
 
-#Purpose = Installing software on new ubuntumachine
+# Purpose = Installing software on new ubuntumachine
 
-#Created on 2016-08-14
+# Created on 2016-08-14
 
-#Author = Adrian Roth
+# Author = Adrian Roth
 
-#Version 1.1
+# Version 1.1
 
-#START
-# Setting on some music
+# START
 sudo apt-get install vlc
+printf "\n\nTurning on some music\n\n\n"
 cvlc --quiet --repeat ~/setup/background_music/* &
 
-sudo apt-get upgrade -y
 sudo apt-get update -y
+sudo apt-get upgrade -y
 
 
-# Installing more complicated programs through scripts
-for filename in ~/setup/*;
+# Installing programs through scripts
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+SCRIPTS=$(find $DIR/scripts -name '*.sh')
+for filename in $SCRIPTS;
 do
-       if [[ ${filename: -3} == ".sh" && ${filename: -8} != "setup.sh" ]]
-       then
-       	 ${filename}
-       fi
+	${filename}
 done
+
+sudo apt-get autoremove -y
 
 # Other programs to install and stuff to do
 echo Install matlab and slack slack
 
-#Kill the music
-pkill -f vlc
+# Kill the music
+pkill vlc

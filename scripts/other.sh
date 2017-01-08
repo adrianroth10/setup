@@ -4,6 +4,7 @@ PROGRAMS=(clamtk \
 	  keepassx \
 	  git \
 	  libxss1 \
+	  make \
 	  silversearcher-ag \
 	  unrar \
 	  wine)
