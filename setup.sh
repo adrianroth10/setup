@@ -9,9 +9,9 @@
 # Version 1.1
 
 # START
-sudo apt-get install vlc
+sudo apt-get install -y vlc
 printf "\n\nTurning on some music\n\n\n"
-cvlc --quiet --repeat ~/setup/background_music/* &
+cvlc --quiet ~/setup/background_music/* &
 
 sudo apt-get update -y
 sudo apt-get upgrade -y
