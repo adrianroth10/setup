@@ -1,7 +1,11 @@
 things that need to be updated:
 	rubyrails
 	mysql
-	vim
-		install without .vim dir
+
+R
+	it's leaving some drt in apt-get, need to be fixed
+git clone
+	change to either clone or pull, see https://gist.github.com/nicferrier/2277987
+file should only be able to run once if multiple scripts are calling eachother
 
 able to read from file of which programs you want to install, you probably don't want everything
