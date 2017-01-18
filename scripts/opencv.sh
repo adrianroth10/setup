@@ -18,6 +18,3 @@ cd
 
 echo "/usr/local/lib" | sudo tee /etc/ld.so.conf.d/opencv.conf
 sudo ldconfig -v
-
-rm -rf ~/.opencv
-rm -rf ~/.opencv_contrib

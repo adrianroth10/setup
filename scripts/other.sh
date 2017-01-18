@@ -2,8 +2,6 @@
 PROGRAMS=(clamtk \
 	  cmake \
 	  keepassx \
-	  git \
-	  libxss1 \
 	  make \
 	  silversearcher-ag \
 	  unrar \
