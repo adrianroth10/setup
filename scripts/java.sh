@@ -1,2 +1,5 @@
 #!/bin/bash
-sudo apt-get install -y default-jdk default-jre
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+. $DIR/../functions.sh
+
+$PACKAGE_INSTALLER default-jdk default-jre

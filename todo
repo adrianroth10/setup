@@ -2,9 +2,6 @@ programs to add
 	rubyrails
 	mysql
 
-R
-	it's leaving some dirt in apt-get, need to be fixed
-
 file should only be able to run once if multiple scripts are calling eachother
 
-able to read from file of which programs you want to install, you probably don't want everything
+pipe all output to /dev/null

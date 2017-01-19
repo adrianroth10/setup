@@ -1,5 +1,8 @@
 #!/bin/bash
-sudo apt-get install -y \
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+. $DIR/../functions.sh
+
+$PACKAGE_INSTALLER \
 	latex-beamer \
 	texlive-bibtex-extra \
 	texlive-fonts-recommended \
