@@ -1,7 +1,0 @@
-programs to add
-	rubyrails
-	mysql
-
-file should only be able to run once if multiple scripts are calling eachother
-
-pipe all output to /dev/null
