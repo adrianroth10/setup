@@ -2,7 +2,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../functions.sh
 
-sudo apt-get install -y \
+package_install \
 	python-matplotlib \
 	python-numpy \
 	python-scipy \

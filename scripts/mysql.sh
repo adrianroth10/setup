@@ -2,5 +2,5 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../functions.sh
 
-$PACKAGE_INSTALLER libmysqlclient-dev
+package_install libmysqlclient-dev
 # more is needed here!

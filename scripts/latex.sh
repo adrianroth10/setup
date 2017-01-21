@@ -2,7 +2,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../functions.sh
 
-$PACKAGE_INSTALLER \
+package_install \
 	latex-beamer \
 	texlive-bibtex-extra \
 	texlive-fonts-recommended \

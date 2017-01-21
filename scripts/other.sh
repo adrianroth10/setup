@@ -7,7 +7,6 @@ PROGRAMS=(clamtk \
 	  keepassx \
 	  make \
 	  silversearcher-ag \
-	  unrar \
-	  wine)
+	  unrar)
 
-sudo apt-get install -y ${PROGRAMS[@]}
+package_install ${PROGRAMS[@]}

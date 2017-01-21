@@ -3,7 +3,6 @@
 set -e
 
 # Declaring variables
-PACKAGE_INSTALLER="sudo apt-get -qq"
 
 RED='\033[0;31m'
 GREEN='\e[32m'
@@ -23,10 +22,30 @@ function git_clone_or_pull {
 
 	if [ ! -d $LOCALREPO_VC_DIR ]
 	then
-		git clone $REPOSRC $LOCALREPO >/dev/null
+		git clone $REPOSRC $LOCALREPO
 	else
 		cd $LOCALREPO
-		git reset --hard HEAD >/dev/null
-		git pull $REPOSRC >/dev/null
+		git reset --hard HEAD
+		git pull $REPOSRC
 	fi
+}
+
+function package_install {
+	sudo apt-get -y install $*
+}
+
+function package_update {
+	sudo apt-get -y update
+}
+
+function package_upgrade {
+	sudo apt-get -y upgrade
+} 
+
+function stopwatch {
+	date1=`date +%s`; 
+	while true; do 
+		printf "$1$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r"; 
+		sleep 1
+	done
 }
