@@ -22,8 +22,8 @@ if ! opencv_version >/dev/null; then
 		libjasper-dev \
 		libdc1394-22-dev
 
-	git_clone_or_pull https://github.com/opencv/opencv.git ~/.opencv
-	git_clone_or_pull https://github.com/opencv/opencv_contrib.git ~/.opencv_contrib
+	git clone https://github.com/opencv/opencv.git ~/.opencv
+	git clone https://github.com/opencv/opencv_contrib.git ~/.opencv_contrib
 	rm -rf ~./opencv_contriv/modules/matlab
 	cd ~/.opencv
 	mkdir -p release

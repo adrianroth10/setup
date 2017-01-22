@@ -45,7 +45,7 @@ function package_upgrade {
 function stopwatch {
 	date1=`date +%s`; 
 	while true; do 
-		printf "$1$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r"; 
-		sleep 1
+		printf "${CLEAR_LINE}$1$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)"; 
+		sleep 1;
 	done
 }
