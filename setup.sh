@@ -16,6 +16,7 @@ LOG=$DIR/setup.log
 function error_trap {
 	printf "\n${RED}	Error occured!"
 	printf "\n	See setup.log\n${NO_COLOR}"
+	kill $PID
 	pkill vlc
 }
 trap 'error_trap' ERR
@@ -29,8 +30,8 @@ if ! command -v vlc >/dev/null; then
 	package_install vlc >>$LOG 2>>$LOG
 fi
 if ! ps -e | grep vlc > /dev/null; then
-	cvlc --quiet -L $DIR/background_music/* >>$LOG 2>>$LOG & 
 	printf "${WHITE}Turning on some music\n${NO_COLOR}"
+	cvlc --quiet -L $DIR/background_music/* >>$LOG 2>>$LOG & 
 fi
 
 printf "${WHITE}apt-get update and upgrade\n${NO_COLOR}"
@@ -49,20 +50,24 @@ else  # Install everything
 	SCRIPTS=($SCRIPTS)
 fi
 
+START=`date +%s`
 L=${#SCRIPTS[@]}
 L=$((L-1))
 for i in $(seq 1 $L);
 do
 	FILE=$(basename ${SCRIPTS[$i]} .sh)
-	stopwatch "${CLEAR_LINE}${WHITE}	[$i/$L] Installing $FILE ${NO_COLOR} " &
+	DATE=`date +%s`
+	stopwatch $DATE "[$i/$L] Installing $FILE" &
 	PID=$!
 	disown
+
 	${SCRIPTS[$i]} >>$LOG 2>>$LOG
+
 	kill $PID
-	printf "${CLEAR_LINE}${GREEN}	$FILE done\n${NO_COLOR}"
+	printf "${CLEAR_LINE}${GREEN}	%-30s %-30s\n${NO_COLOR}" "$FILE done" $(date -u --date @$((`date +%s` - $DATE)) +%H:%M:%S)
 done
 
-printf "${CLEAR_LINE}${GREEN}\n	All done${NO_COLOR}\n"
+printf "${CLEAR_LINE}${GREEN}\n	%-30s %-30s\n${NO_COLOR}" "All done" $(date -u --date @$((`date +%s` - $START)) +%H:%M:%S)
 # Kill the music
 pkill vlc
 
