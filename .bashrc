@@ -140,6 +140,6 @@ alias gaa="git add -A"
 alias gca="git commit --amend"
 
 # extra paths
-export PATH="/usr/local/MATLAB/R2016a/bin:$PATH"
+export PATH="/usr/local/MATLAB/R2016b/bin:$PATH"
 export PATH="~/.julia:$PATH"
 export PATH="$HOME/scrum/scrumapp/bin:$PATH"
