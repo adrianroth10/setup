@@ -3,7 +3,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../../functions.sh
 
 if ! command -v ~/.julia/julia >/dev/null; then
-	git clone git://github.com/JuliaLang/julia.git ~/.julia
+	git_clone_or_pull git://github.com/JuliaLang/julia.git ~/.julia
 
 	package_install libssl1.0.0 libssl-dev gfortran m4
 	cd ~/.julia
