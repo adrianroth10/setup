@@ -18,4 +18,4 @@ if ! command -v ~/.julia/julia >/dev/null; then
 
 fi
 $DIR/../bashrc.sh
-julia $DIR/julia.jl
+~/.julia/julia $DIR/julia.jl
