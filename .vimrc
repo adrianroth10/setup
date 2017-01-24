@@ -7,22 +7,19 @@ call vundle#begin()
 " For GitHub repos, you specify plugins using the
 " 'user/repository' format
 Plugin 'Buffergator'
+Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'gerw/vim-latex-suite'
 Plugin 'gmarik/vundle'
+Plugin 'JuliaEditorSupport/julia-vim'
 Plugin 'klen/python-mode'
 Plugin 'marcweber/vim-addon-mw-utils'
 Plugin 'matchit.zip'
-Plugin 'ngmy/vim-rubocop'
 Plugin 'Rename'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-Plugin 'thoughtbot/vim-rspec'
 Plugin 'ton/vim-bufsurf'
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'dhruvasagar/vim-table-mode'
 
 call vundle#end()
 filetype plugin indent on
