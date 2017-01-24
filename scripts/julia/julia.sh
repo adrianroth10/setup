@@ -16,6 +16,6 @@ if ! command -v ~/.julia/julia >/dev/null; then
 	make
 	make testall
 
-	julia $DIR/julia.jl
-	$DIR/../bashrc.sh
 fi
+$DIR/../bashrc.sh
+julia $DIR/julia.jl
