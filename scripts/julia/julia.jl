@@ -2,6 +2,7 @@ Pkg.update()
 
 packages = [
 	    "Distributions"
+	    "MAT"
 	    "Plots"
 	    "PyPlot"
 	    ]
