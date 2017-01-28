@@ -10,14 +10,16 @@ package_install \
 	cmake \
 	hdf5-tools
 
-if ! command -v ~/.julia/julia >/dev/null; then
-	git_clone_or_pull git://github.com/JuliaLang/julia.git ~/.julia
-
+git_clone_or_pull git://github.com/JuliaLang/julia.git ~/.julia
+if [ $PULLED == TRUE ]; then
 	cd ~/.julia
 	git checkout release-0.5
 	make
 	make testall
 
 fi
+PULLED=FALSE
+
 $DIR/../bashrc.sh
+export JULIA_PKGDIR="~/.julia_pkg"
 ~/.julia/julia $DIR/julia.jl

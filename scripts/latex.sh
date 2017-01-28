@@ -5,8 +5,8 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 package_install \
 	latex-beamer \
 	texlive-bibtex-extra \
-	texlive-fonts-recommended \
-	texlive-lang-swedish \
+	texlive-fonts-extra \
+	texlive-lang-european \
 	texlive-latex-base \
 	texlive-latex-extra \
 	texlive-publishers \

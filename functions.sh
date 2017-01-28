@@ -23,6 +23,15 @@ function git_clone_or_pull {
 	if [ ! -d $LOCALREPO_VC_DIR ]
 	then
 		git clone $REPOSRC $LOCALREPO
+		PULLED=TRUE
+	else
+		cd $LOCALREPO
+		git pull > git_pull_temp
+		if [ "$(head -n 1 git_pull_temp)" != "Already up-to-date." ];
+		then
+			PULLED=TRUE
+		fi
+		rm git_pull_temp
 	fi
 }
 

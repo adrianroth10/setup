@@ -1,3 +1,4 @@
+Pkg.init()
 Pkg.update()
 
 packages = [

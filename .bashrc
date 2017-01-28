@@ -124,6 +124,10 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
+# julia
+export PATH="~/.julia:$PATH"
+export JULIA_PKGDIR="/home/rotharen/.julia_pkg"
+
 # Aliases
 alias ..="cd .."
 alias ...="cd ../.."
@@ -141,5 +145,4 @@ alias gca="git commit --amend"
 
 # extra paths
 export PATH="/usr/local/MATLAB/R2016b/bin:$PATH"
-export PATH="~/.julia:$PATH"
 export PATH="$HOME/scrum/scrumapp/bin:$PATH"
