@@ -12,5 +12,5 @@ Scripts to run for setting up various programs on an ubuntu machine
     - rubyrails
     - mysql
   * file should only be able to run once if multiple scripts are calling eachother
-  * The outputs of sudo password and cvlc is fucking shit up!
-  * Add stopwatch for each installation so it says how long each installation takes
+  * input file should be run automaticly and maybe be put in gitignore
+  * add backup script and generic stuff
