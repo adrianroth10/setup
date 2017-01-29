@@ -19,11 +19,17 @@ package_install \
 	libpng-dev \
 	libtiff-dev \
 	libjasper-dev \
-	libdc1394-22-dev
+	libdc1394-22-dev \
+	libv4l-dev \
+	libv4l-0
+
+if [ "$1" == "2" ]; then
+	rm -rf ~/.opencv ~/.opencv_contrib
+fi
 
 git_clone_or_pull https://github.com/opencv/opencv.git ~/.opencv
 git_clone_or_pull https://github.com/opencv/opencv_contrib.git ~/.opencv_contrib
-if [ $PULLED == TRUE ]; then
+if [ "$PULLED" == "TRUE" -o "$1" == "1" ]; then
 	cd ~/.opencv
 	mkdir -p build
 
