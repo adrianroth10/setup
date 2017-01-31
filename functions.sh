@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# Setting exit scripts at error
 set -e
 
 # Declaring variables
@@ -31,6 +32,7 @@ function git_clone_or_pull {
 		then
 			PULLED=TRUE
 		fi
+		cat git_pull_temp
 		rm git_pull_temp
 	fi
 }

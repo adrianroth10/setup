@@ -3,6 +3,7 @@ Pkg.update()
 
 packages = [
 	    "Distributions"
+	    "Interpolations"
 	    "MAT"
 	    "Plots"
 	    "PyPlot"

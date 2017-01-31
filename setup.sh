@@ -9,7 +9,7 @@
 
 # Version 1.1
 
-# Prepatations
+# Pre
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 LOG=$DIR/setup.log
 . $DIR/functions.sh
@@ -23,7 +23,7 @@ trap 'error_trap' ERR
 
 
 # START
-echo "" >$LOG
+echo "Log file: `date +%y-%m-%d`" >$LOG
 
 if ! command -v vlc >/dev/null; then
 	printf "${WHITE}Installing VLC\n${NO_COLOR}" 
@@ -51,8 +51,7 @@ else  # Install everything
 fi
 
 START=`date +%s`
-L=${#SCRIPTS[@]}
-L=$((L-1))
+L=$(({#SCRIPTS[@]}-1))
 for i in $(seq 1 $L);
 do
 	FILE=$(basename ${SCRIPTS[$i]} .sh)
