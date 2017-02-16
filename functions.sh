@@ -27,13 +27,14 @@ function git_clone_or_pull {
 		PULLED=TRUE
 	else
 		cd $LOCALREPO
-		git pull > git_pull_temp
-		if [ "$(head -n 1 git_pull_temp)" != "Already up-to-date." ];
-		then
-			PULLED=TRUE
-		fi
-		cat git_pull_temp
-		rm git_pull_temp
+		git pull
+		#git pull > git_pull_temp
+		#if [ "$(head -n 1 git_pull_temp)" != "Already up-to-date." ];
+		#then
+		#	PULLED=TRUE
+		#fi
+		#cat git_pull_temp
+		#rm git_pull_temp
 	fi
 }
 
