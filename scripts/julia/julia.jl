@@ -6,6 +6,7 @@ packages = [
 	    "Interpolations"
 	    "MAT"
 	    "Plots"
+	    "ProfileView"
 	    "PyPlot"
 	    ]
 for package in packages
