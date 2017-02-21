@@ -23,13 +23,15 @@ package_install \
 	libv4l-dev \
 	libv4l-0
 
-if [ "$1" == "2" ]; then
+if [ "$1" == "-ff" ]; then
 	rm -rf ~/.opencv ~/.opencv_contrib
 fi
 
-git_clone_or_pull https://github.com/opencv/opencv.git ~/.opencv
-git_clone_or_pull https://github.com/opencv/opencv_contrib.git ~/.opencv_contrib
-if [ "$PULLED" == "TRUE" -o "$1" == "1" ]; then
+if [ "$1" == "-f" ] || ! command -v opencv_version ; then
+	cd ~/.opencv
+	git reset --hard HEAD
+	git_clone_or_pull https://github.com/opencv/opencv.git ~/.opencv
+	git_clone_or_pull https://github.com/opencv/opencv_contrib.git ~/.opencv_contrib
 	cd ~/.opencv
 	mkdir -p build
 
@@ -45,4 +47,3 @@ if [ "$PULLED" == "TRUE" -o "$1" == "1" ]; then
 	echo "/usr/local/lib" | sudo tee /etc/ld.so.conf.d/opencv.conf
 	sudo ldconfig -v
 fi
-PULLED=FALSE
