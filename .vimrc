@@ -64,5 +64,5 @@ nmap <silent> <C-o> :BufSurfForward<CR>
 
 autocmd FileType c setlocal shiftwidth=8 tabstop=8
 autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab
-autocmd FileType r,ruby,eruby,plaintex,tex,matlab,yaml setlocal shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType r,ruby,eruby,plaintex,tex,matlab,yaml,scss setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType c,cpp,java,php,r,ruby,eruby,plaintex,tex,matlab,yaml,make autocmd BufWritePre <buffer> :%s/\s\+$//e
