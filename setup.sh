@@ -51,7 +51,8 @@ else  # Install everything
 fi
 
 START=`date +%s`
-L=$(({#SCRIPTS[@]}-1))
+L=${#SCRIPTS[@]}
+L=$((L - 1))
 for i in $(seq 1 $L);
 do
 	FILE=$(basename ${SCRIPTS[$i]} .sh)
