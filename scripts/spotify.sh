@@ -1,6 +1,6 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-. $DIR/../functions.sh
+. $DIR/../include/functions.sh
 
 if [ "$F" == "ff" ]; then
 	package_uninstall spotify-client
