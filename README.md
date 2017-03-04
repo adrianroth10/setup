@@ -4,3 +4,20 @@ The background music have been provided by http://www.bensound.com
 
 ## Demo
 ![](demo.gif)
+
+## Available scripts
+* bashrc.sh
+* vim.sh
+* sdl.sh
+* latex.sh
+* spotify.sh
+* java.sh
+* google_chrome.sh
+* other.sh:
+  - List of other programs
+* opencv.sh
+* curl.sh
+* julia.sh
+* R.sh
+* python.sh
+* mysql.sh
