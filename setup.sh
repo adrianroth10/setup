@@ -12,7 +12,7 @@
 # Pre
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 LOG=$DIR/setup.log
-. $DIR/include/functions.sh
+. $DIR/extras/functions.sh
 function error_trap {
 	printf "\n${RED}	Error occured!"
 	printf "\n	See setup.log\n${NO_COLOR}"

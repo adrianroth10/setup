@@ -1,6 +1,6 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-. $DIR/../include/functions.sh
+. $DIR/../extras/functions.sh
 
 if [ "$F" == "ff" ]; then
 	rm -rf ~/.opencv ~/.opencv_contrib
