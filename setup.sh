@@ -21,7 +21,6 @@ function error_trap {
 }
 trap 'error_trap' ERR
 
-
 # START
 echo "Log file: `date +%y-%m-%d`" >$LOG
 
@@ -40,11 +39,11 @@ package_upgrade >>$LOG 2>>$LOG
 printf "${GREEN}apt-get update and upgrade done\n${NO_COLOR}"
 
 # If an inputfile is given
-if [ "$#" -eq 1 ]; then
+if [ $I ]; then
 	SCRIPTS=()
 	while read LINE; do
 		SCRIPTS+=($(find $DIR/scripts/ -name $LINE))
-	done < $1
+	done < $I
 else  # Install everything
 	SCRIPTS=$(find $DIR/scripts -name '*.sh')
 	SCRIPTS=($SCRIPTS)
@@ -61,7 +60,7 @@ do
 	PID=$!
 	disown
 
-	${SCRIPTS[$i]} >>$LOG 2>>$LOG
+	${SCRIPTS[$i]} -$F >>$LOG 2>>$LOG
 
 	kill $PID
 	printf "${CLEAR_LINE}${GREEN}	%-30s %-30s\n${NO_COLOR}" "$FILE done" $(date -u --date @$((`date +%s` - $DATE)) +%H:%M:%S)
