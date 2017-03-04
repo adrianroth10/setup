@@ -1,5 +1,5 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-. $DIR/../functions.sh
+. $DIR/../../functions.sh
 
-cp $DIR/../.bashrc ~/.bashrc
+cp $DIR/.bashrc ~/.bashrc
