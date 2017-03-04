@@ -2,32 +2,32 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../functions.sh
 
-package_install \
-	build-essential \
-	cmake \
-	git \
-	libgtk2.0-dev \
-	pkg-config \
-	libavcodec-dev \
-	libavformat-dev \
-	libswscale-dev \
-	python-dev \
-	python-numpy \
-	libtbb2 \
-	libtbb-dev \
-	libjpeg-dev \
-	libpng-dev \
-	libtiff-dev \
-	libjasper-dev \
-	libdc1394-22-dev \
-	libv4l-dev \
-	libv4l-0
-
-if [ "$1" == "-ff" ]; then
+if [ "$F" == "ff" ]; then
 	rm -rf ~/.opencv ~/.opencv_contrib
 fi
 
-if [ "$1" == "-f" ] || ! command -v opencv_version ; then
+if [ "$F" == "f" ] || ! command -v opencv_version ; then
+	package_install \
+		build-essential \
+		cmake \
+		git \
+		libgtk2.0-dev \
+		pkg-config \
+		libavcodec-dev \
+		libavformat-dev \
+		libswscale-dev \
+		python-dev \
+		python-numpy \
+		libtbb2 \
+		libtbb-dev \
+		libjpeg-dev \
+		libpng-dev \
+		libtiff-dev \
+		libjasper-dev \
+		libdc1394-22-dev \
+		libv4l-dev \
+		libv4l-0
+
 	cd ~/.opencv
 	git reset --hard HEAD
 	git_clone_or_pull https://github.com/opencv/opencv.git ~/.opencv

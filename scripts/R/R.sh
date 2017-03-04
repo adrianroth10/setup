@@ -2,10 +2,14 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../../functions.sh
 
-if ! command -v R > /dev/null; then
-	sudo add-apt-repository -y ppa:marutter/rrutter
-	package_update
+if [ "$F" == "ff" ]; then
+	package_uninstall r-base r-base-dev
 fi
 
-package_install r-base r-base-dev
+if ! command -v R ; then
+	sudo add-apt-repository -y ppa:marutter/rrutter
+	package_update
+	package_install r-base r-base-dev
+fi
+
 sudo Rscript $DIR/R.R

@@ -6,8 +6,9 @@ git_clone_or_pull git@github.com:fsek/web.git ~/Documents/fsek/web
 cd ~/Documents/fsek/web
 if ! command -versions rbenv; then
 	rbenv install 2.3.0
+else
+	printf "Error, rbenv not installed\n"
+	exit 1
 fi
 gem install bundler
 bundler install
-
-# set up database
