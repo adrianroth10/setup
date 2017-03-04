@@ -42,6 +42,10 @@ function package_install {
 	sudo apt-get -y install $*
 }
 
+function package_uninstall {
+	sudo apt-get -y purge $*
+}
+
 function package_update {
 	sudo apt-get -y update
 }
@@ -56,3 +60,41 @@ function stopwatch {
 		sleep 0.5
 	done
 }
+
+function printHelp {
+	printf "Usage: $(basename "$0") [-h] [-f[f]] [-i file]
+	-- scripts to install and setup programs on your ubuntu machine
+
+where:
+	-h show this help text
+	-f soft reinstallation of programs
+	-ff full reinstallation of program
+	-i install subset of programs named in file\n"
+}
+
+function getOpts {
+	while getopts ":fhi:" opt; do
+		case $opt in
+			f)
+				F=${F}f
+				;;
+			h)
+				printHelp
+				exit 0
+				;;
+			i)
+				I=$OPTARG
+				;;
+			\?)
+				printf "Invalid option -${OPTARG}.\n"
+				exit 1
+				;;
+			:)
+				printf "Option -$OPTARG requires an argument.\n"
+				exit 1
+				;;
+		esac
+	done
+}
+
+getOpts $*
