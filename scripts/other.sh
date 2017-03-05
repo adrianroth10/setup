@@ -8,6 +8,7 @@ PROGRAMS=(clamtk \
 	  keepassx \
 	  make \
 	  silversearcher-ag \
+	  slack-desktop \
 	  unrar)
 
 package_install ${PROGRAMS[@]}
