@@ -1,4 +1,5 @@
 #!/bin/bash
+# Will overwrite your current .vimrc file if any exists
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../../extras/functions.sh
 

@@ -6,9 +6,11 @@ The background music have been provided by http://www.bensound.com
 ![](demo.gif)
 
 ## Available scripts
-* bashrc.sh 
 * vim.sh 
+  - Will overwrite your current .vimrc file if any exists
 * sdl.sh 
+* bashrc.sh 
+  - Adding some useful aliases and exports to .bashrc
 * latex.sh 
 * spotify.sh 
 * java.sh 
