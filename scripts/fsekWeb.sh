@@ -12,3 +12,5 @@ else
 fi
 gem install bundler
 bundler install
+
+add_line ~/.bashrc "alias tofsek=\"cd ~/Documents/fsek/web\""
