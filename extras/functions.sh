@@ -98,3 +98,16 @@ function getOpts {
 }
 
 getOpts $*
+
+function add_line {
+	if [ ! -e $1 ]; then
+		printf "" > $1
+	fi
+	while read LINE; do
+		if [ "$2" == "$LINE" ]; then
+			return
+		fi
+	done < $1
+	printf "$2\n" >> $1
+}
+
