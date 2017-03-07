@@ -24,6 +24,9 @@ trap 'error_trap' ERR
 # START
 echo "Log file: `date +%y-%m-%d`" >$LOG
 
+if [ ! -d "${DIR}backround_music" ]; then
+	tar -xf ${DIR}/background_music.tar.gz
+fi
 if ! command -v vlc >/dev/null; then
 	printf "${WHITE}Installing VLC\n${NO_COLOR}" 
 	package_install vlc >>$LOG 2>>$LOG
