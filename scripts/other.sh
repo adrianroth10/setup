@@ -1,5 +1,5 @@
-# List of other programs
 #!/bin/bash
+# List of other programs
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 

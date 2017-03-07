@@ -14,10 +14,14 @@ The background music have been provided by http://www.bensound.com
 SCRIPTS=$(find $DIR/../scripts -name '*.sh')
 
 for SCRIPT in $SCRIPTS; do
-	printf "* $(basename $SCRIPT)" >> $FILE
-	LINE=$(head -n 1 $SCRIPT)
-	if [ "$LINE" != "#!/bin/bash" ]; then
-		printf ":\n  - ${LINE:2}" >> $FILE
-	fi
-	printf "\n" >> $FILE
+	printf "* $(basename $SCRIPT) \n" >> $FILE
+	while read LINE; do
+		if [ "${LINE:0:2}" == "#!" ]; then
+			continue
+		fi
+		if [ "${LINE:0:2}" != "# " ]; then
+			break
+		fi
+		printf "  - ${LINE:2}\n" >> $FILE
+	done < $SCRIPT
 done

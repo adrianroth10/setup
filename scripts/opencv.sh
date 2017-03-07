@@ -1,4 +1,5 @@
 #!/bin/bash
+# Currently has a bug where the sudo password must be written twice
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
