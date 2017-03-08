@@ -8,7 +8,7 @@ if [ "$F" == "f" ] || ! command -v rbenv ; then
 	$DIR/bashrc.sh
 fi
 
-add_lines ~/.bashrc "# rbenv, adding to path and stuff"
-add_lines ~/.bashrc "export PATH=\"\$HOME/.rbenv/bin:\$PATH\""
-add_lines ~/.bashrc "eval \"\$(rbenv init -)\""
-add_lines ~/.bashrc "export PATH=\"\$HOME/.rbenv/plugins/ruby-build/bin:\$PATH\""
+add_lines ~/.bashrc "# rbenv, adding to path and stuff
+export PATH=\"\$HOME/.rbenv/bin:\$PATH\"
+eval \"\$(rbenv init -)\"
+export PATH=\"\$HOME/.rbenv/plugins/ruby-build/bin:\$PATH\""
