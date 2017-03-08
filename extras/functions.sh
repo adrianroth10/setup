@@ -99,15 +99,18 @@ function getOpts {
 
 getOpts $*
 
-function add_line {
+# Appends lines to a file if there is no match of the first line
+# in input
+function add_lines {
 	if [ ! -e $1 ]; then
 		printf "" > $1
 	fi
+	FIRSTLINE=${2%%$'\n'*}
 	while read LINE; do
-		if [ "$2" == "$LINE" ]; then
+		if [ "$FIRSTLINE" == "$LINE" ]; then
 			return
 		fi
 	done < $1
-	printf "$2\n" >> $1
+	printf "\n$2" >> $1
 }
 
