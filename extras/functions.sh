@@ -44,14 +44,16 @@ function stopwatch {
 }
 
 function printHelp {
-	printf "Usage: $(basename "$0") [-h] [-f[f]] [-i file]
+	printf "Usage:	$(basename "$0") [-h] [-f[f]] [-i file]
+	$(basename "$0") file
 	-- scripts to install and setup programs on your ubuntu machine
 
 where:
 	-h show this help text
 	-f soft reinstallation of programs
 	-ff full reinstallation of program
-	-i install subset of programs named in file\n"
+	-i install subset of programs named in file
+	file input file as above if just one argument\n"
 }
 
 function getOpts {
@@ -77,6 +79,9 @@ function getOpts {
 				;;
 		esac
 	done
+	if [ ! $F ] && [ $# == "1" ]; then
+		I="$1"
+	fi
 }
 
 getOpts $*

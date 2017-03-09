@@ -26,4 +26,16 @@ for SCRIPT in $SCRIPTS; do
 	done < $SCRIPT
 done
 
-printf "\n\nThe input file also handles packages to be installed using the package manager. Just write the name as you would after for example \`sudo apt-get install\`\n" >> $FILE
+printf "\n\n## Examples
+To install all scripts just run \`./setup.sh\`
+Then to run a subset of the scripts in a certain order declared in \`file\` run either
+\`\`\`
+./setup.sh file
+\`\`\`
+or
+\`\`\`
+./setup.sh -i file
+\`\`\`
+The input file also handles packages to be installed using the package manager. Just write the name as you would after for example \`sudo apt-get install\`
+
+For further information try \`./setup.sh -h\`" >> $FILE
