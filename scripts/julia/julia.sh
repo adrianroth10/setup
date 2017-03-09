@@ -7,7 +7,7 @@ if [ "$F" == "ff" ]; then
 fi
 
 if [ "$F" == "f" ] || ! command -v julia ; then
-	package_install \
+	$PACKAGE_INSTALL \
 		libgtk-3-0 \
 		libssl1.0.0 \
 		libssl-dev \

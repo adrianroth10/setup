@@ -2,7 +2,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
-package_install \
+$PACKAGE_INSTALL \
 	libsdl2-2.0-0 \
 	libsdl-ttf2.0-0 \
 	libsdl2-dev \

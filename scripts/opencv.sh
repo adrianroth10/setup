@@ -8,7 +8,7 @@ if [ "$F" == "ff" ]; then
 fi
 
 if [ "$F" == "f" ] || ! command -v opencv_version ; then
-	package_install \
+	$PACKAGE_INSTALL \
 		build-essential \
 		cmake \
 		git \

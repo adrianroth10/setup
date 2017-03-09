@@ -2,7 +2,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
-package_install \
+$PACKAGE_INSTALL \
 	python-matplotlib \
 	python-numpy \
 	python-scipy \

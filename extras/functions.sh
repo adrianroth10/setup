@@ -1,10 +1,9 @@
 #!/bin/sh
 
-# Setting exit scripts at error
+# Setting exit at all errors
 set -e
 
 # Declaring variables
-
 RED='\033[0;31m'
 GREEN='\e[32m'
 YELLOW='\033[0;33m'
@@ -13,6 +12,13 @@ NO_COLOR='\033[0m'
 CLEAR_LINE='\r\033[K'
 BLINK='\e[5m'
 NORMAL='\e[25m'
+
+PACKAGE_MANAGER="sudo apt-get"
+PACKAGE_INSTALL="$PACKAGE_MANAGER -y install"
+PACKAGE_UNINSTALL="$PACKAGE_MANAGER -y purge"
+PACKAGE_UPDATE="$PACKAGE_MANAGER -y update"
+PACKAGE_UPGRADE="$PACKAGE_MANAGER -y upgrade"
+
 
 # Functions
 function git_clone_or_pull {
@@ -23,36 +29,12 @@ function git_clone_or_pull {
 
 	if [ ! -d $LOCALREPO_VC_DIR ]
 	then
-		git clone $REPOSRC $LOCALREPO
-		PULLED=TRUE
+		git clone $REPOSRC $LOCALREPO || return $?
 	else
 		cd $LOCALREPO
-		git pull
-		#git pull > git_pull_temp
-		#if [ "$(head -n 1 git_pull_temp)" != "Already up-to-date." ];
-		#then
-		#	PULLED=TRUE
-		#fi
-		#cat git_pull_temp
-		#rm git_pull_temp
+		git pull || return $?
 	fi
 }
-
-function package_install {
-	sudo apt-get -y install $*
-}
-
-function package_uninstall {
-	sudo apt-get -y purge $*
-}
-
-function package_update {
-	sudo apt-get -y update
-}
-
-function package_upgrade {
-	sudo apt-get -y upgrade
-} 
 
 function stopwatch {
 	while true; do 

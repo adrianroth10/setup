@@ -11,4 +11,4 @@ PROGRAMS=(clamtk \
 	  slack-desktop \
 	  unrar)
 
-package_install ${PROGRAMS[@]}
+$PACKAGE_INSTALL ${PROGRAMS[@]}

@@ -29,7 +29,7 @@ if [ ! -d "${DIR}backround_music" ]; then
 fi
 if ! command -v vlc >/dev/null; then
 	printf "${WHITE}Installing VLC\n${NO_COLOR}" 
-	package_install vlc >>$LOG 2>>$LOG
+	$PACKAGE_INSTALL vlc >>$LOG 2>>$LOG
 fi
 if ! ps -e | grep vlc > /dev/null; then
 	printf "${WHITE}Turning on some music\n${NO_COLOR}"
@@ -37,8 +37,8 @@ if ! ps -e | grep vlc > /dev/null; then
 fi
 
 printf "${WHITE}apt-get update and upgrade\n${NO_COLOR}"
-package_update >>$LOG 2>>$LOG
-package_upgrade >>$LOG 2>>$LOG
+$PACKAGE_UPDATE >>$LOG 2>>$LOG
+$PACKAGE_UPGRADE >>$LOG 2>>$LOG
 printf "${GREEN}apt-get update and upgrade done\n${NO_COLOR}"
 
 # If an inputfile is given
