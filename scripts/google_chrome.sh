@@ -2,10 +2,6 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
-if [ "$F" == "ff" ]; then
-	$PACKAGE_UNINSTALL google-chrome-stable
-fi
-
 if ! command -v google-chrome ; then
 	$PACKAGE_INSTALL libindicator7 libappindicator1 
 	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb

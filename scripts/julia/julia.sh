@@ -27,5 +27,6 @@ export JULIA_PKGDIR="$HOME/.julia_pkg"
 
 add_lines ~/.bashrc "# julia
 export PATH=\"~/.julia:\$PATH\"
-export JULIA_PKGDIR=\"/home/rotharen/.julia_pkg\""
+export JULIA_PKGDIR=\"/home/rotharen/.julia_pkg\"
 
+"

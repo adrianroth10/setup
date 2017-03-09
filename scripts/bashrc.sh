@@ -21,5 +21,7 @@ alias gca=\"git commit --amend\"
 
 # extra paths
 export PATH=\"/usr/local/MATLAB/R2016b/bin:\$PATH\"
-export PATH=\"\$HOME/scrum/scrumapp/bin:\$PATH\""
+export PATH=\"\$HOME/scrum/scrumapp/bin:\$PATH\"
+
+"
 # Matlab will be removed
