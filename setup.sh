@@ -16,8 +16,10 @@ LOG=$DIR/setup.log
 function error_trap {
 	printf "\n${RED}	Error occured!"
 	printf "\n	See setup.log\n${NO_COLOR}"
-	kill $PID
 	pkill vlc
+	if [ $PID ]; then
+		kill $PID
+	fi
 }
 trap 'error_trap' ERR
 

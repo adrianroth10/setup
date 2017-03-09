@@ -29,10 +29,10 @@ function git_clone_or_pull {
 
 	if [ ! -d $LOCALREPO_VC_DIR ]
 	then
-		git clone $REPOSRC $LOCALREPO
+		git clone $REPOSRC $LOCALREPO || return $?
 	else
 		cd $LOCALREPO
-		git pull
+		git pull || return $?
 	fi
 }
 
