@@ -29,8 +29,10 @@ if [ "$F" == "f" ] || ! command -v opencv_version ; then
 		libv4l-dev \
 		libv4l-0
 
-	cd ~/.opencv
-	git reset --hard HEAD
+	if [ -d ~/.opencv ]; then
+		cd ~/.opencv
+		git reset --hard HEAD
+	fi
 	git_clone_or_pull https://github.com/opencv/opencv.git ~/.opencv
 	git_clone_or_pull https://github.com/opencv/opencv_contrib.git ~/.opencv_contrib
 	cd ~/.opencv
