@@ -20,7 +20,6 @@ if [ "$F" == "f" ] || ! command -v julia ; then
 	cd ~/.julia
 	git checkout release-0.5
 	make
-	$DIR/bashrc.sh
 fi
 
 export JULIA_PKGDIR="$HOME/.julia_pkg"
