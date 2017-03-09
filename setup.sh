@@ -23,6 +23,7 @@ trap 'error_trap' ERR
 
 # START
 echo "Log file: `date +%y-%m-%d`" >$LOG
+sudo -v
 
 if [ ! -d "${DIR}backround_music" ]; then
 	tar -xf ${DIR}/background_music.tar.gz
@@ -44,8 +45,17 @@ printf "${GREEN}apt-get update and upgrade done\n${NO_COLOR}"
 # If an inputfile is given
 if [ $I ]; then
 	SCRIPTS=()
+	OTHER=()
 	while read LINE; do
-		SCRIPTS+=($(find $DIR/scripts/ -name $LINE))
+		if [ ! $LINE ]; then 
+			continue
+		fi
+		NEXTSCRIPT=$(find $DIR/scripts/ -name $LINE)
+		if [ "$NEXTSCRIPT" ]; then
+			SCRIPTS+=($NEXTSCRIPT)
+		else
+			OTHER+=($LINE)
+		fi
 	done < $I
 else  # Install everything
 	SCRIPTS=$(find $DIR/scripts -name '*.sh')
@@ -54,8 +64,7 @@ fi
 
 START=`date +%s`
 L=${#SCRIPTS[@]}
-L=$((L - 1))
-for i in $(seq 1 $L);
+for ((i=0;i<L;i++))
 do
 	FILE=$(basename ${SCRIPTS[$i]} .sh)
 	DATE=`date +%s`
@@ -69,7 +78,21 @@ do
 	printf "${CLEAR_LINE}${GREEN}	%-30s %-30s\n${NO_COLOR}" "$FILE done" $(date -u --date @$((`date +%s` - $DATE)) +%H:%M:%S)
 done
 
+L=${#OTHER[@]}
+if (("$L" > "0")); then
+	DATE=`date +%s`
+	stopwatch $DATE "Installing Other packages" &
+	disown
+	PID=$!
+
+	$PACKAGE_INSTALL ${OTHER[@]} >>$LOG 2>>$LOG
+
+	kill $PID
+	printf "${CLEAR_LINE}${GREEN}	%-30s %-30s\n${NO_COLOR}" "Other packages done" $(date -u --date @$((`date +%s` - $DATE)) +%H:%M:%S)
+fi
+
 printf "${CLEAR_LINE}${GREEN}\n	%-30s %-30s\n${NO_COLOR}" "All done" $(date -u --date @$((`date +%s` - $START)) +%H:%M:%S)
+
 # Kill the music
 pkill vlc
 

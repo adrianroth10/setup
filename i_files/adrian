@@ -10,6 +10,12 @@ latex.sh
 mysql.sh
 opencv.sh
 python.sh
-rubyrails.sh
 sdl.sh
-other.sh
+
+clamtk
+cmake
+keepassx
+make
+silversearcher-ag
+slack-desktop
+unrar

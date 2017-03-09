@@ -15,8 +15,6 @@ The background music have been provided by http://www.bensound.com
 * spotify.sh 
 * java.sh 
 * google_chrome.sh 
-* other.sh 
-  - List of other programs
 * opencv.sh 
   - Currently has a bug where the sudo password must be written twice
 * curl.sh 
@@ -24,3 +22,6 @@ The background music have been provided by http://www.bensound.com
 * R.sh 
 * python.sh 
 * mysql.sh 
+
+
+The input file also handles packages to be installed using the package manager. Just write the name as you would after for example `sudo apt-get install`

@@ -25,3 +25,5 @@ for SCRIPT in $SCRIPTS; do
 		printf "  - ${LINE:2}\n" >> $FILE
 	done < $SCRIPT
 done
+
+printf "\n\nThe input file also handles packages to be installed using the package manager. Just write the name as you would after for example \`sudo apt-get install\`\n" >> $FILE
