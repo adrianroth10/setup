@@ -74,6 +74,7 @@ do
 	PID=$!
 	disown
 
+	sudo -v
 	${SCRIPTS[$i]} -$F >>$LOG 2>>$LOG
 
 	kill $PID
