@@ -24,31 +24,27 @@ fi
 printf "Password (put blank if you don't trust the script): "
 read -s PASSWORD
 printf "\n"
+printf "#!/bin/sh\n" > ~/.mutt_exec.sh
 if [ $PASSWORD ]; then
 	rm -f ~/.password
 	printf "export GMAIL_PASSWORD=$PASSWORD" > ~/.password_temp
 	printf "Set Password for logging into mutt\n"
-	gpg --output ~/.password --symmetric ~/.password_temp
+	gpg --no-use-agent --output ~/.password --symmetric ~/.password_temp
 	rm -f ~/.password_temp
 
-	printf "#!/bin/sh
-	pwds=\`gpg --decrypt ~/.passwords\` >/dev/null 2>/dev/null
-	eval \"\$pwds\"
-	exec mutt \"\$@\"
-" > ~/.mutt_exec.sh
-	chmod u+rwx ~/.mutt_exec.sh
-else
-	printf "#!/bin/sh
-	exec mutt \"\$@\"
-" > ~/.mutt_exec.sh
-	chmod u+rwx ~/.mutt_exec.sh
+	printf "
+pwds=\`gpg --no-use-agent --decrypt ~/.passwords\` >/dev/null 2>/dev/null
+eval \"\$pwds\"
+" >> ~/.mutt_exec.sh
 fi
 
+printf "exec mutt \"\$@\"\n
+" >> ~/.mutt_exec.sh
+chmod u+rwx ~/.mutt_exec.sh
 add_lines ~/.bashrc "alias mutt=\"~/.mutt_exec.sh\"
 "
  
-rm -f ~/.muttrc
-add_lines ~/.muttrc "# Basic muttrc for gmail
+printf "# Basic muttrc for gmail
 set imap_user = \"${EMAIL}\"
 set imap_pass = \"\$GMAIL_PASSWORD\"
 
@@ -67,5 +63,5 @@ set message_cachedir=~/.mutt/cache/bodies
 set certificate_file=~/.mutt/certificates
 
 set move = no
-"
+" > ~/.muttrc 
 # Make more generic for different emails
