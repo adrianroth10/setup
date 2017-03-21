@@ -8,6 +8,9 @@ The background music have been provided by http://www.bensound.com
 ## Available scripts
 * vim.sh 
   - Will overwrite your current .vimrc file if any exists
+* mutt.sh 
+  - Only works for gmail accounts
+  - Encrypts your password using gpg in file ~/.password for your account
 * sdl.sh 
 * bashrc.sh 
   - Adding some useful aliases and exports to .bashrc
