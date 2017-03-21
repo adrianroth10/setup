@@ -25,11 +25,11 @@ printf "Password (put blank if you don't trust the script): "
 read -s PASSWORD
 printf "\n"
 if [ $PASSWORD ]; then
-	rm ~/.password
+	rm -f ~/.password
 	printf "export GMAIL_PASSWORD=$PASSWORD" > ~/.password_temp
 	printf "Set Password for logging into mutt\n"
 	gpg --output ~/.password --symmetric ~/.password_temp
-	rm ~/.password_temp
+	rm -f ~/.password_temp
 
 	printf "#!/bin/sh
 	pwds=\`gpg --decrypt ~/.passwords\` >/dev/null 2>/dev/null
@@ -47,7 +47,7 @@ fi
 add_lines ~/.bashrc "alias mutt=\"~/.mutt_exec.sh\"
 "
  
-rm ~/.muttrc
+rm -f ~/.muttrc
 add_lines ~/.muttrc "# Basic muttrc for gmail
 set imap_user = \"${EMAIL}\"
 set imap_pass = \"\$GMAIL_PASSWORD\"
@@ -60,6 +60,7 @@ set realname = \"${NAME}\"
 set folder = \"imaps://imap.gmail.com:993\"
 set spoolfile = \"+INBOX\"
 set postponed=\"+[Gmail]/Drafts\"
+set record = \"+[Gmail]/Sent Mail\"
 
 set header_cache=~/.mutt/cache/headers
 set message_cachedir=~/.mutt/cache/bodies
