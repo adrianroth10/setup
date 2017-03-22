@@ -4,7 +4,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
-$PACKAGE_INSTALL mutt
+$PACKAGE_INSTALL mutt w3m
 
 mkdir -p ~/.mutt/cache/headers
 mkdir -p ~/.mutt/cache/bodies
@@ -27,7 +27,7 @@ printf "\n"
 printf "#!/bin/sh\n" > ~/.mutt_exec.sh
 if [ $PASSWORD ]; then
 	rm -f ~/.password
-	printf "export GMAIL_PASSWORD=$PASSWORD" > ~/.password_temp
+	printf "export GMAIL_PASSWORD=%s" "$PASSWORD" > ~/.password_temp
 	printf "Set Password for logging into mutt\n"
 	gpg --no-use-agent --output ~/.password --symmetric ~/.password_temp
 	rm -f ~/.password_temp
