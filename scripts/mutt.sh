@@ -33,7 +33,11 @@ if [ $PASSWORD ]; then
 	rm -f ~/.password_temp
 
 	printf "
-pwds=\`gpg --no-use-agent --decrypt ~/.passwords\` >/dev/null 2>/dev/null
+pwds=\`gpg --no-use-agent --decrypt ~/.password\` >/dev/null 2>/dev/null
+if [ \"\$?\" -ne \"0\" ]; then
+	printf \"Error wrong password\\n\"
+	exit 1
+fi
 eval \"\$pwds\"
 " >> ~/.mutt_exec.sh
 fi
@@ -63,5 +67,11 @@ set message_cachedir=~/.mutt/cache/bodies
 set certificate_file=~/.mutt/certificates
 
 set move = no
+
+alternative_order text/plain text/html
+auto_view text/html
 " > ~/.muttrc 
-# Make more generic for different emails
+
+printf "text/html; /usr/bin/firefox %%s >/dev/null 2>&1; needsterminal
+text/html; w3m -T text/html -dump %%s; copiousoutput
+" > ~/.mailcap
