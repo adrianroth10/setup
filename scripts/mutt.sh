@@ -60,7 +60,6 @@ set realname = \"${NAME}\"
 set folder = \"imaps://imap.gmail.com:993\"
 set spoolfile = \"+INBOX\"
 set postponed=\"+[Gmail]/Drafts\"
-set record = \"+[Gmail]/Sent Mail\"
 
 set header_cache=~/.mutt/cache/headers
 set message_cachedir=~/.mutt/cache/bodies
