@@ -7,7 +7,7 @@ if [ "$F" == "f" ] || ! command -v vim ; then
 	$PACKAGE_INSTALL vim vim-gtk git
 	git_clone_or_pull https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-	cp $DIR/.vimrc ~/.vimrc
 fi
 
+cp $DIR/.vimrc ~/.vimrc
 vim +PluginInstall +qall >/dev/null

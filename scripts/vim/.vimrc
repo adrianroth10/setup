@@ -7,6 +7,7 @@ call vundle#begin()
 " For GitHub repos, you specify plugins using the
 " 'user/repository' format
 Plugin 'Buffergator'
+Plugin 'derekwyatt/vim-scala'
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'gerw/vim-latex-suite'
 Plugin 'gmarik/vundle'
@@ -64,5 +65,5 @@ nmap <silent> <C-o> :BufSurfForward<CR>
 
 autocmd FileType c setlocal shiftwidth=8 tabstop=8
 autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab
-autocmd FileType r,ruby,eruby,plaintex,tex,matlab,yaml,scss setlocal shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType r,ruby,eruby,plaintex,tex,matlab,yaml,scss,haskell setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType c,cpp,java,php,r,ruby,eruby,plaintex,tex,matlab,yaml,make autocmd BufWritePre <buffer> :%s/\s\+$//e
