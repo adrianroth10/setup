@@ -66,6 +66,7 @@ set message_cachedir=~/.mutt/cache/bodies
 set certificate_file=~/.mutt/certificates
 
 set move = no
+bind index G imap-fetch-mail
 
 alternative_order text/plain text/html
 auto_view text/html
