@@ -1,13 +1,33 @@
 #Packages and programs essential or important to Anton
+bashrc.sh
+vim.sh
+spotify.sh
+google_chrome.sh
+R.sh
+julia.sh
+curl.sh
+java.sh
+latex.sh
+mysql.sh
+opencv.sh
+python.sh
+sdl.sh
+keepassx2.sh
+
+clamtk
+cmake
+make
+silversearcher-ag
+slack-desktop
+stellarium
+unrar
 ROOT Cern
 Geant4
 Keepassx 2
 Thunderbird
-Firefox
+Firefox (this installed by default?)
 Okular
 Latex
-VMWARE?
 Mendeley
-Java plugin for firefox: https://www.java.com/sv/download/help/linux_install.xml Näå fuck this!
+Pandoc
 Pandoc (vim-pandoc), /home/anton/Documents/Övrigt/Computer/pandoc_notes.md, works with the advanced/extended markdown flavour: MultiMarkdown!!!
-MultiMarkdown, https://github.com/fletcher/peg-multimarkdown/wiki/How-do-I-install-MultiMarkdown%3F
