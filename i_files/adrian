@@ -12,6 +12,7 @@ opencv.sh
 python.sh
 sdl.sh
 
+arduino
 clamtk
 cmake
 keepassx
