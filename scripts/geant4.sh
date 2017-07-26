@@ -22,15 +22,16 @@ if [ "$F" == "f" ]; then
 		cd ~/.geant4
 		git checkout $VERSION
 		git fetch --all
-		git reset --hard origin/$VERSION
+		#git reset --hard origin/$VERSION #this was fatal for some reason
 		#git pull https://github.com/Geant4/geant4.git ~/.geant4 $VERSION
-		rm -rf $VERSION-build
-		rm -rf $VERSION-install
+		sudo rm -rf $VERSION-build
+		sudo rm -rf $VERSION-install
 	else
 		#Download source files
 		#wget -O ~/.geant4/ "http://cern.ch/geant4/support/source/geant4.10.03.p01.tar.gz"
 		#or clone: 
 		git_clone_or_pull https://github.com/Geant4/geant4.git ~/.geant4
+		cd ~/.geant4
 		git checkout $VERSION
 	fi
 
@@ -45,10 +46,10 @@ if [ "$F" == "f" ]; then
 	#mkdir -p g4-install
 	cd $VERSION-build
 	#Check last dir name
-	cmake -DCMAKE_INSTALL_PREFIX=~/.geant4/$VERSION-install -DGEANT4_USE_OPENGL_X11=ON -DGEANT4_BUILD_MULTITHREADED=ON -DGEANT4_USE_QT=ON -DGEANT4_USE_GDML=ON -DGEANT4_INSTALL_DATA=ON  -DGEANT4_USE_RAYTRACER_X11=ON ../
+	sudo cmake -DCMAKE_INSTALL_PREFIX=~/.geant4/$VERSION-install -DGEANT4_USE_OPENGL_X11=ON -DGEANT4_BUILD_MULTITHREADED=ON -DGEANT4_USE_QT=ON -DGEANT4_USE_GDML=ON -DGEANT4_INSTALL_DATA=ON  -DGEANT4_USE_RAYTRACER_X11=ON ../
 
-	make -j2
-	make install
+	sudo make -j2
+	sudo make install
 
 	#Add source configs if not existing to ~/.bashrc
 	grep -q -F 'source ~/.geant/$VERSION-install/bin/geant4.sh' ~/.bashrc || echo "source ~/.geant/$VERSION-install/bin/geant4.sh" >> ~/.bashrc

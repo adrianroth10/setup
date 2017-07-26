@@ -25,6 +25,19 @@ The background music have been provided by http://www.bensound.com
 * R.sh 
 * python.sh 
 * mysql.sh 
+* keepassx2.sh
+  - Installs version 2 of keepassx which e.g. can handle `.kdbx` files. 
+* mendeley.sh
+* root_cern.sh 
+  - Complete build of the desired version.
+  - Add export variable to your `.bashrc`.
+  - Need sudo password at least once.
+* geant4.sh 
+  - Complete build of the desired version.
+  - Add export variable to your `.bashrc`.
+* inkscape.sh
+  - Includes the _textext_ extension for Latex editing.
+
 
 
 ## Examples
