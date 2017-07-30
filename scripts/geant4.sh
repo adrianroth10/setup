@@ -52,7 +52,7 @@ if [ "$F" == "f" ]; then
 	sudo make install
 
 	#Add source configs if not existing to ~/.bashrc
-	grep -q -F 'source ~/.geant/$VERSION-install/bin/geant4.sh' ~/.bashrc || echo "source ~/.geant/$VERSION-install/bin/geant4.sh" >> ~/.bashrc
+	grep -q -F 'source ~/.geant4/$VERSION-install/bin/geant4.sh' ~/.bashrc || echo "source ~/.geant/$VERSION-install/bin/geant4.sh" >> ~/.bashrc
 	#Set env variable for modules if not set. OBS: THIS HAS TO BE SET MANUALLY!
 	#grep -q -F 'export G4_MODULES=~/.geant4/$VERSION-install/lib/Geant4-10.3.1/Modules' ~/.bashrc || echo "'export G4_MODULES="~/.geant4/$VERSION-install/lib/Geant4-10.3.1/Modules"'" >> ~/.bashrc
 

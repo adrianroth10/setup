@@ -6,12 +6,16 @@ R.sh
 java.sh
 latex.sh
 python.sh
+julia.sh
+curl.sh
+sdl.sh
 keepassx2.sh
 inkscape.sh
 mendeley.sh
 root_cern.sh
 geant4.sh
 
+arduino
 clamtk
 cmake
 make
