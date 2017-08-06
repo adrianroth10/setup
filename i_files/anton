@@ -1,4 +1,4 @@
-bashrc.sh
+bashrc_anton.sh
 vim.sh
 spotify.sh
 google_chrome.sh
@@ -14,6 +14,7 @@ inkscape.sh
 mendeley.sh
 root_cern.sh
 geant4.sh
+jupyter.sh
 
 arduino
 clamtk
@@ -24,3 +25,4 @@ stellarium
 unrar
 okular
 pandoc
+valgrind
