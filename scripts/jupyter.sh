@@ -24,6 +24,9 @@ sudo pip3 install -U scipy
 sudo pip install -U  matplotlib
 sudo pip3 install -U matplotlib
 
+#sudo pip install -U  plotly
+#sudo pip3 install -U plotly
+
 #For C++: http://shuvomoy.github.io/blog/programming/2016/08/04/Cpp-kernel-for-Jupyter.html
 #wget https://root.cern.ch/download/cling/cling_2017-08-05_ubuntu16.tar.bz2
 #tar -xvf cling_2017-08-05_ubuntu16.tar.bz2

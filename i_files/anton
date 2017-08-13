@@ -15,6 +15,7 @@ mendeley.sh
 root_cern.sh
 geant4.sh
 jupyter.sh
+pandoc.sh
 
 arduino
 clamtk
@@ -24,5 +25,4 @@ silversearcher-ag
 stellarium
 unrar
 okular
-pandoc
 valgrind

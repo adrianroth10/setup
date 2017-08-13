@@ -21,3 +21,5 @@ alias root=\"root -l\"
 alias root_valgrind=\"valgrind --tool=memcheck --suppressions=$ROOTSYS/etc/valgrind-root.supp --log-file=log --leak-check=full\"
 
 "
+#https://superuser.com/questions/505857/set-the-terminal-prompt-in-ubuntu-to-show-only-the-working-directory-name-instea
+
