@@ -15,5 +15,5 @@ cd build
 sudo cmake ../
 sudo make install
 cd ../../
-rm keepassx-2.0.2.tar.gz
-rm -rf keepassx-2.0.2
+sudo rm keepassx-2.0.2.tar.gz
+sudo rm -rf keepassx-2.0.2

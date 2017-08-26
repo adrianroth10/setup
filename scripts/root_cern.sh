@@ -66,6 +66,9 @@ if [ "$F" == "f" ]; then
 
 	if [ -d ~/.root_cern ]; then
 		cd ~/.root_cern
+		git gc --prune=now
+		git remote prune origin
+
 		git checkout $VERSION
 		git fetch --all
 		#git reset --hard origin/$VERSION #this was fatal for some reason
@@ -90,12 +93,29 @@ if [ "$F" == "f" ]; then
 	mkdir -p root-build
 	mkdir -p root-install
 	cd root-build
-	sudo cmake ../ -Dgnuinstall=ON -DCMAKE_INSTALL_PREFIX=~/.root_cern/root-install 
+	sudo cmake ../ -Dgnuinstall=ON -Dpython3=ON -DCMAKE_INSTALL_PREFIX=~/.root_cern/root-install 
 	sudo make -j2
 	sudo make install
 	sudo ldconfig -v
 
 	#If not existing, adding line to file
 	grep -q -F 'source ~/.root_cern/root-install/bin/thisroot.sh' ~/.bashrc || echo "source ~/.root_cern/root-install/bin/thisroot.sh" >> ~/.bashrc
+
+	#Following: http://scikit-hep.org/root_numpy/install.html
+	if [ -d ~/.root_numpy ]; then
+		cd ~/.root_numpy
+		git gc --prune=now
+		git remote prune origin
+		git_clone_or_pull git://github.com/rootpy/root_numpy.git ~/.root_numpy 
+		python setup.py install --user
+		python3 setup.py install --user
+	else 
+		git_clone_or_pull git://github.com/rootpy/root_numpy.git ~/.root_numpy 
+		cd ~/.root_numpy
+		git checkout $VERSION
+		python setup.py install --user
+		python3 setup.py install --user
+
+	fi
 
 fi

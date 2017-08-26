@@ -5,15 +5,10 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #Not sure about this. Do python2 or 3 or both. 
 #In jupyter it seems like python2 and 3 are enabled.
 
-$PACKAGE_INSTALL \ 
-	python2.7 \
-	python-pip \
-	python-pip3 \
-	python-dev \
-	ipython ipython-notebook
+$PACKAGE_INSTALL ipython ipython-notebook
 
 sudo pip install jupyter
-sudp pip3 install jupyter
+sudo pip3 install jupyter
 
 sudo pip install -U  numpy
 sudo pip3 install -U numpy

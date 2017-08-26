@@ -20,6 +20,8 @@ if [ "$F" == "f" ]; then
 
 	if [ -d ~/.geant4 ]; then
 		cd ~/.geant4
+		git gc --prune=now
+		git remote prune origin
 		git checkout $VERSION
 		git fetch --all
 		#git reset --hard origin/$VERSION #this was fatal for some reason
