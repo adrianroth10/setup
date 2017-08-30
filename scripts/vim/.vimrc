@@ -21,6 +21,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'ton/vim-bufsurf'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
 
 call vundle#end()
 filetype plugin indent on
