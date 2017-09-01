@@ -7,7 +7,7 @@ if [ "$F" == "f" ] || ! command -v rbenv ; then
 	git_clone_or_pull https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 	~/.rbenv/bin/rbenv install 2.3.0
 	~/.rbenv/bin/rbenv global 2.3.0
-	gem install roadie
+	gem install premailer
 	$DIR/bashrc.sh
 fi
 
