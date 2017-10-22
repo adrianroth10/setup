@@ -7,8 +7,6 @@ julia.sh
 curl.sh
 java.sh
 latex.sh
-mysql.sh
-opencv.sh
 python.sh
 sdl.sh
 
@@ -19,6 +17,5 @@ cmake
 keepassx
 make
 silversearcher-ag
-slack-desktop
 stellarium
 unrar
