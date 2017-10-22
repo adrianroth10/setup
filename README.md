@@ -6,25 +6,33 @@ The background music have been provided by http://www.bensound.com
 ![](demo.gif)
 
 ## Available scripts
-* vim.sh 
-  - Will overwrite your current .vimrc file if any exists
+* curl.sh 
+* bashrc.sh 
+  - Adding some useful aliases and exports to .bashrc
+* sdl.sh 
+* geant4.sh 
+* iphone.sh 
 * mutt.sh 
   - Only works for gmail accounts
   - Encrypts your password using gpg in file ~/.password for your account
-* sdl.sh 
-* bashrc.sh 
-  - Adding some useful aliases and exports to .bashrc
-* latex.sh 
 * spotify.sh 
 * java.sh 
+* root_cern.sh 
+* julia.sh 
+* latex.sh 
 * google_chrome.sh 
+* keepassx2.sh 
+  - Following: http://ubuntuhandbook.org/index.php/2015/12/install-keepassx-2-0-in-ubuntu-16-04-15-10-14-04/
+* vim.sh 
+  - Will overwrite your current .vimrc file if any exists
+* python.sh 
+* R.sh 
 * opencv.sh 
   - Currently has a bug where the sudo password must be written twice
-* curl.sh 
-* julia.sh 
-* R.sh 
-* python.sh 
 * mysql.sh 
+* haskell.sh 
+  - Installing the haskell, this means haskell stack, cabal and haste
+* ruby.sh 
 
 
 ## Examples
