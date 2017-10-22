@@ -3,7 +3,16 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
-wget -qO- https://get.haskellstack.org/ | sh
+if [ "$F" == "f" ] || ! command -v stack ; then
+	wget -qO- https://get.haskellstack.org/ | sh
+fi
 $PACKAGE_INSTALL cabal-install
-cabal update
-cabal install haste-compiler
+
+if [ "$F" == "f" ] || ! command -v hastec ; then
+	cabal update
+	cabal install haste-compiler
+
+	add_lines ~/.bashrc "export PATH=\"~/.cabal/bin:\$PATH\""
+	source ~/.bashrc
+	haste-boot
+fi
