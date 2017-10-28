@@ -6,4 +6,3 @@ $PACKAGE_INSTALL \
 	python-matplotlib \
 	python-numpy \
 	python-scipy \
-	python-unit \

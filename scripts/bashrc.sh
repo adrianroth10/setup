@@ -10,14 +10,15 @@ alias ..=\"cd ..\"
 alias ...=\"cd ../..\"
 alias go=\"gnome-open\"
 alias gccw=\"/opt/mingw32/bin/i686-w64-mingw32-gcc\"
-alias tohyllie=\"cd ~/Documents/hyllieAnalys/hyllieanalys\"
 alias sprint=\"vim ~/scrum/sprintbacklog*\"
+alias xd=\"xinput disable 13\"
 
 # Git aliases
 alias gs=\"git status\"
 alias gc=\"git commit\"
 alias gaa=\"git add -A\"
 alias gca=\"git commit --amend\"
+alias gp=\"git push\"
 
 # extra paths
 export PATH=\"/usr/local/MATLAB/R2016b/bin:\$PATH\"

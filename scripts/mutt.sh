@@ -60,6 +60,13 @@ set realname = \"${NAME}\"
 set folder = \"imaps://imap.gmail.com:993\"
 set spoolfile = \"+INBOX\"
 set postponed=\"+[Gmail]/Drafts\"
+bind editor <space> noop
+macro index,pager y \"<save-message>=[Gmail]/All Mail<enter><enter>\" \"Archive\"
+macro index,pager d \"<save-message>=[Gmail]/Trash<enter><enter>\" \"Trash\"
+macro index gi \"<change-folder>=INBOX<enter>\" \"Go to inbox\"
+macro index ga \"<change-folder>=[Gmail]/All Mail<enter>\" \"Go to all mail\"
+macro index gs \"<change-folder>=[Gmail]/Sent Mail<enter>\" \"Go to starred messages\"
+macro index gd \"<change-folder>=[Gmail]/Drafts<enter>\" \"Go to drafts\"
 
 set header_cache=~/.mutt/cache/headers
 set message_cachedir=~/.mutt/cache/bodies
