@@ -1,0 +1,75 @@
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+"here goes plugins
+
+"vim-latex-suite
+Plugin 'vim-latex/vim-latex'
+Plugin 'ton/vim-bufsurf'
+"Plugin 'scrooloose/syntastic' "automatic compiler
+Plugin 'scrooloose/nerdtree'
+Plugin 'dhruvasagar/vim-table-mode'
+Plugin 'Conque-GDB'
+"Automatic .cc file if header defined
+Plugin 'ccimpl.vim'
+"Automatically generates the c++ header skeleton
+"Plugin 'povilasb/vim-cpp-header-generator'
+"To execute .py
+Plugin 'ironcamel/vim-script-runner'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
+
+filetype plugin indent on
+
+".tex, .bib documents will be automated latex
+let g:tex_flavor='latex' 
+
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_MultipleCompileFormats = 'pdf, aux' 
+"let g:Tex_FoldedEnvironments = ''
+
+nmap <silent> <C-i> :BufSurfBack<CR>
+nmap <silent> <C-o> :BufSurfForward<CR>
+
+"Further settings
+"
+"set tabstop=8 softtabstop=0 shiftwidth=2 smarttab "change tab + indentation
+
+"short-commands
+
+" In normal mode the return key acts similar to insert mode
+:nmap <return> o<esc>
+
+" In normal mode the space key acts similar to insert mode
+:nmap <space> i<space><esc>
+
+" In normal mode the backspace key acts similar to insert mode
+:nmap <backspace> i<backspace><esc>l
+
+"let g:syntastic_cpp_compiler_options = '-std=c++11'
+
+"for autocompletion in vim-latex
+set grepprg=grep\ -nH\ $*
+
+:inoremap § `
+
+color desert
+syntax on
+
+set wildmenu
+set showcmd
+set autoindent
+set confirm
+set visualbell
+set notimeout ttimeout ttimeoutlen=200
+
+"Set indentation conventions for filetypes
+autocmd FileType c setlocal shiftwidth=8 tabstop=8
+autocmd FileType cpp,cc,cxx setlocal shiftwidth=2 tabstop=2
+autocmd FileType python,txt setlocal shiftwidth=4 softtabstop=4 expandtab
+autocmd FileType r,ruby,eruby,plaintex,tex,matlab,yaml setlocal shiftwidth=2 softtabstop=2 expandtab
+
+"Removes trailing whitespaces
+autocmd FileType c,cpp,java,php,r,ruby,eruby,plaintex,tex,matlab,yaml,make autocmd BufWritePre <buffer> :%s/\s\+$//e

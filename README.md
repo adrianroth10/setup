@@ -33,6 +33,21 @@ The background music have been provided by http://www.bensound.com
 * haskell.sh 
   - Installing the haskell, this means haskell stack, cabal and haste
 * ruby.sh 
+* keepassx2.sh
+  - Installs version 2 of keepassx which e.g. can handle `.kdbx` files. 
+* mendeley.sh
+* root_cern.sh 
+  - Complete build of the desired version.
+  - Add export variable to your `.bashrc`.
+  - Need sudo password at least once.
+* geant4.sh 
+  - Complete build of the desired version.
+  - Add export variable to your `.bashrc`.
+* inkscape.sh
+  - Includes the _textext_ extension for Latex editing.
+* python_extensions.sh
+  * Installs PyNE and uncertainties.
+
 
 
 ## Examples

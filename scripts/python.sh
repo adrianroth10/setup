@@ -6,3 +6,7 @@ $PACKAGE_INSTALL \
 	python-matplotlib \
 	python-numpy \
 	python-scipy \
+	python2.7 \
+	python-dev \
+	python-pip \
+	python3-pip \
