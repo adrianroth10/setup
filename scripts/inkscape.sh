@@ -12,8 +12,8 @@ $PACKAGE_INSTALL inkscape pstoedit
 #Extension for latex texting: "textext"
 wget https://pav.iki.fi/_downloads/textext-0.4.4.tar.gz
 tar -xvf textext-0.4.4.tar.gz 
-mv LICENSE.txt ~/.config/inkscape/extensions/
-mv textext.inx ~/.config/inkscape/extensions/
-mv textext.py ~/.config/inkscape/extensions/
+mv -f LICENSE.txt ~/.config/inkscape/extensions/
+mv -f textext.inx ~/.config/inkscape/extensions/
+mv -f textext.py ~/.config/inkscape/extensions/
 
 rm textext-0.4.4.tar.gz
