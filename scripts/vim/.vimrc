@@ -44,12 +44,6 @@ let g:Tex_ViewRule_pdf = 'evince'
 "python-mode
 let g:pymode_rope_completion = 0
 
-" RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-
 " Some other things
 color desert
 syntax on
@@ -62,7 +56,6 @@ set visualbell
 set notimeout ttimeout ttimeoutlen=200
 
 nmap <Leader>f gg=G
-nmap <Leader>t :call RunCurrentSpecFile() <CR>
 nmap <silent> <C-i> :BufSurfBack<CR>
 nmap <silent> <C-o> :BufSurfForward<CR>
 nmap <Leader>s :setlocal spell! spelllang=en_gb<CR>
