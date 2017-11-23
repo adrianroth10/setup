@@ -10,3 +10,4 @@ $PACKAGE_INSTALL \
 	python-dev \
 	python-pip \
 	python3-pip \
+	python-skimage \
