@@ -12,6 +12,7 @@ alias go=\"gnome-open\"
 alias gccw=\"/opt/mingw32/bin/i686-w64-mingw32-gcc\"
 alias sprint=\"vim ~/scrum/sprintbacklog*\"
 alias xd=\"xinput disable 13\"
+alias bt=\"bluetoothctl\"
 
 # Git aliases
 alias gs=\"git status\"

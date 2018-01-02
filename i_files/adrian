@@ -12,6 +12,7 @@ sdl.sh
 
 arduino
 arduino-mk
+bluez
 clamtk
 cmake
 keepassx
