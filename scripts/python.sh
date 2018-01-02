@@ -11,3 +11,8 @@ $PACKAGE_INSTALL \
 	python-pip \
 	python3-pip \
 	python-skimage \
+
+add_lines ~/.pythonrc.py "import numpy as np
+import matplotlib.pyplot as plt"
+add_lines ~/.bashrc "# python
+export PYTHONSTARTUP=~/.pythonrc.py"
