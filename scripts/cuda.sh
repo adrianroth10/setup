@@ -1,6 +1,6 @@
 #!/bin/bash
 # Installation of the cuda drivers
-# Will probably only work on an ubuntu system with certain GPU:s
+# Will probably only work on an 64bit ubuntu 16.04 system with certain GPU:s
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
@@ -12,6 +12,7 @@ $PACKAGE_UPDATE
 $PACKAGE_INSTALL cuda
 rm cuda-repo-ubuntu1604_9.0.176-1_amd64.deb
 
-add_lines ~/.bashrc "export PATH=/usr/local/cuda-9.0/bin\${PATH:+:\${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64\${LD_LIBRARY_PATH:+:\${LD_LIBRARY_PATH}}"
+add_lines ~/.bashrc "# cuda
+export PATH=/usr/local/cuda-9.1/bin\${PATH:+:\${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-9.1/lib64\${LD_LIBRARY_PATH:+:\${LD_LIBRARY_PATH}}"
 
