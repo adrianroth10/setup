@@ -12,3 +12,4 @@ $PACKAGE_INSTALL \
 	texlive-publishers \
 	texlive-publishers-doc \
 	texlive-science \
+	texlive-xetex \

@@ -6,6 +6,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 if [ "$F" == "ff" ]; then
 	rm -rf ~/.root_cern 
+	rm -rf ~/.root_numpy 
 fi
 
 #Prerequisites: https://root.cern.ch/build-prerequisites#ubuntu
@@ -107,14 +108,16 @@ if [ "$F" == "f" ]; then
 		git gc --prune=now
 		git remote prune origin
 		git_clone_or_pull git://github.com/rootpy/root_numpy.git ~/.root_numpy 
-		python setup.py install --user
-		python3 setup.py install --user
+		#python setup.py install --user
+		#python3 setup.py install --user
+		sudo ROOTSYS=$ROOTSYS python3 setup.py install
 	else 
 		git_clone_or_pull git://github.com/rootpy/root_numpy.git ~/.root_numpy 
 		cd ~/.root_numpy
-		git checkout $VERSION
-		python setup.py install --user
-		python3 setup.py install --user
+		#git checkout $VERSION
+		sudo ROOTSYS=$ROOTSYS python3 setup.py install
+		#python setup.py install --user
+		#python3 setup.py install --user
 
 	fi
 
