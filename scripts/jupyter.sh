@@ -7,17 +7,41 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 $PACKAGE_INSTALL ipython ipython-notebook
 
-sudo pip install jupyter
-sudo pip3 install jupyter
+#-U means upgrade all packages to the newest available version
 
-sudo pip install -U  numpy
+sudo pip install  -U jupyter
+sudo pip3 install -U jupyter
+
+sudo pip install  -U numpy
 sudo pip3 install -U numpy
 
-sudo pip install -U  scipy
+sudo pip install  -U scipy
 sudo pip3 install -U scipy
 
-sudo pip install -U  matplotlib
+sudo pip install  -U matplotlib
 sudo pip3 install -U matplotlib
+
+sudo pip install  -U matplotlib
+sudo pip3 install -U matplotlib
+
+#Deprecated by jupyter API = nbconvert
+#sudo pip install  -U runipy
+#sudo pip3 install -U runipy
+
+sudo pip install  -U notedown
+sudo pip3 install -U notedown
+
+sudo pip install  -U bqplot
+sudo pip3 install -U bqplot
+sudo jupyter nbextension enable --py --sys-prefix bqplot
+
+sudo pip install  -U ipywidgets
+sudo pip3 install -U ipywidgets
+jupyter nbextension enable --py widgetsnbextension --sys-prefix
+
+sudo pip install  -U matplotlib
+sudo pip3 install -U matplotlib
+
 
 #sudo pip install -U  plotly
 #sudo pip3 install -U plotly

@@ -1,4 +1,4 @@
 *.log
-
+.*.sw*
 background_music
 test.sh
