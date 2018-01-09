@@ -40,6 +40,7 @@ let g:syntastic_cpp_compiler_options = '-std=c++11'
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats = 'pdf, aux'
 let g:Tex_ViewRule_pdf = 'evince'
+let g:tex_flavor = 'latex'
 
 "python-mode
 let g:pymode_rope_completion = 0
