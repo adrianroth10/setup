@@ -1,12 +1,12 @@
 #!/bin/bash
 
+#VERSION="v6-04-18"
 VERSION="v6-08-06"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
 if [ "$F" == "ff" ]; then
 	rm -rf ~/.root_cern 
-	rm -rf ~/.root_numpy 
 fi
 
 #Prerequisites: https://root.cern.ch/build-prerequisites#ubuntu
@@ -101,24 +101,5 @@ if [ "$F" == "f" ]; then
 
 	#If not existing, adding line to file
 	grep -q -F 'source ~/.root_cern/root-install/bin/thisroot.sh' ~/.bashrc || echo "source ~/.root_cern/root-install/bin/thisroot.sh" >> ~/.bashrc
-
-	#Following: http://scikit-hep.org/root_numpy/install.html
-	if [ -d ~/.root_numpy ]; then
-		cd ~/.root_numpy
-		git gc --prune=now
-		git remote prune origin
-		git_clone_or_pull git://github.com/rootpy/root_numpy.git ~/.root_numpy 
-		#python setup.py install --user
-		#python3 setup.py install --user
-		sudo ROOTSYS=$ROOTSYS python3 setup.py install
-	else 
-		git_clone_or_pull git://github.com/rootpy/root_numpy.git ~/.root_numpy 
-		cd ~/.root_numpy
-		#git checkout $VERSION
-		sudo ROOTSYS=$ROOTSYS python3 setup.py install
-		#python setup.py install --user
-		#python3 setup.py install --user
-
-	fi
 
 fi

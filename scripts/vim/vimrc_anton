@@ -1,33 +1,54 @@
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-"here goes plugins
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+"
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+"here goes plugins ...
 
 "vim-latex-suite
 Plugin 'vim-latex/vim-latex'
+
+"to navigate buffers forwards and backwards according to the navigation history
 Plugin 'ton/vim-bufsurf'
-"Plugin 'scrooloose/syntastic' "automatic compiler
+
+"automatic compiler
+Plugin 'scrooloose/syntastic' 
+
+" a file system explorer
 Plugin 'scrooloose/nerdtree'
+
+"automatic table creator & formatter
 Plugin 'dhruvasagar/vim-table-mode'
+
+" gdb in vim
 Plugin 'Conque-GDB'
-"Automatic .cc file if header defined
-Plugin 'ccimpl.vim'
-"Automatically generates the c++ header skeleton
-"Plugin 'povilasb/vim-cpp-header-generator'
-"To execute .py
+
+"To e.g. execute a .py from F5
 Plugin 'ironcamel/vim-script-runner'
+
+"Execute pandoc within vim
 Plugin 'vim-pandoc/vim-pandoc'
+
+"Syntax highlighting
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 
-filetype plugin indent on
+" converts ipynb to markdown editible file
+Plugin 'goerz/ipynb_notedown.vim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 ".tex, .bib documents will be automated latex
 let g:tex_flavor='latex' 
 
 let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_MultipleCompileFormats = 'pdf, aux' 
+let g:Tex_MultipleCompileFormats = 'pdf, bibtex, aux, pdf' 
 "let g:Tex_FoldedEnvironments = ''
 
 nmap <silent> <C-i> :BufSurfBack<CR>
@@ -48,10 +69,10 @@ nmap <silent> <C-o> :BufSurfForward<CR>
 " In normal mode the backspace key acts similar to insert mode
 :nmap <backspace> i<backspace><esc>l
 
-"let g:syntastic_cpp_compiler_options = '-std=c++11'
+let g:syntastic_cpp_compiler_options = '-std=c++11'
 
 "for autocompletion in vim-latex
-set grepprg=grep\ -nH\ $*
+"set grepprg=grep\ -nH\ $* "NEEDED?
 
 :inoremap § `
 
@@ -64,6 +85,8 @@ set autoindent
 set confirm
 set visualbell
 set notimeout ttimeout ttimeoutlen=200
+
+nmap <Leader>ss :setlocal spell! spelllang=en_us<CR>
 
 "Set indentation conventions for filetypes
 autocmd FileType c setlocal shiftwidth=8 tabstop=8

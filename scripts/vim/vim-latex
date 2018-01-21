@@ -1,0 +1,6 @@
+#IMAPs that are to be included at the end in /home/anton/.vim/bundle/vim-latex/ftplugin/tex_latexSuite.vim
+
+call IMAP('NUC', '$^{<++>}$<++>', 'tex')
+
+#Tried mapping <C-m> to math-mode without success.
+call IMAP('`M', '$<++>$<++>', 'tex')
