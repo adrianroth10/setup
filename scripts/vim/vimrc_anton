@@ -40,6 +40,9 @@ Plugin 'vim-pandoc/vim-pandoc-syntax'
 " converts ipynb to markdown editible file
 Plugin 'goerz/ipynb_notedown.vim'
 
+" autocompletion for c/c++ etc.
+Plugin 'valloric/youcompleteme'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
