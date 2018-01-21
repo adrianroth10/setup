@@ -40,6 +40,7 @@ let g:syntastic_cpp_compiler_options = '-std=c++11'
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats = 'pdf, aux'
 let g:Tex_ViewRule_pdf = 'evince'
+let g:tex_flavor = 'latex'
 
 "python-mode
 let g:pymode_rope_completion = 0
@@ -58,7 +59,7 @@ set notimeout ttimeout ttimeoutlen=200
 nmap <Leader>f gg=G
 nmap <silent> <C-i> :BufSurfBack<CR>
 nmap <silent> <C-o> :BufSurfForward<CR>
-nmap <Leader>s :setlocal spell! spelllang=en_gb<CR>
+nmap <Leader>ss :setlocal spell! spelllang=en_gb<CR>
 
 " Setting tabwidths
 autocmd FileType c setlocal shiftwidth=8 tabstop=8
