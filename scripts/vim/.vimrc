@@ -59,7 +59,7 @@ set notimeout ttimeout ttimeoutlen=200
 nmap <Leader>f gg=G
 nmap <silent> <C-i> :BufSurfBack<CR>
 nmap <silent> <C-o> :BufSurfForward<CR>
-nmap <Leader>ss :setlocal spell! spelllang=en_gb<CR>
+autocmd FileType plaintex,tex setlocal spell! spelllang=en_gb
 
 " Setting tabwidths
 autocmd FileType c setlocal shiftwidth=8 tabstop=8
