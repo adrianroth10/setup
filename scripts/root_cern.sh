@@ -86,15 +86,12 @@ if [ "$F" == "f" ]; then
 		git checkout $VERSION
 
 	fi
-	#git pull http://root.cern.ch/git/root.git $VERSION
-	#git_clone_or_pull https://github.com/opencv/opencv_contrib.git ~/.opencv_contrib
-	#Go to version
 
 	#Follow README for build at fixed location
 	mkdir -p root-build
 	mkdir -p root-install
 	cd root-build
-	sudo cmake ../ -Dgnuinstall=ON -Dpython3=ON -DCMAKE_INSTALL_PREFIX=~/.root_cern/root-install 
+	sudo cmake ../ -Dgnuinstall=ON -Dpython2=ON -Dpython3=ON -DCMAKE_INSTALL_PREFIX=~/.root_cern/root-install 
 	sudo make -j2
 	sudo make install
 	sudo ldconfig -v
