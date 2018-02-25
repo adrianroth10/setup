@@ -91,7 +91,7 @@ if [ "$F" == "f" ]; then
 	mkdir -p root-build
 	mkdir -p root-install
 	cd root-build
-	sudo cmake ../ -Dgnuinstall=ON -Dpython2=ON -Dpython3=ON -DCMAKE_INSTALL_PREFIX=~/.root_cern/root-install 
+	sudo cmake ../ -Dgnuinstall=ON -Dpython2=ON -DCMAKE_INSTALL_PREFIX=~/.root_cern/root-install 
 	sudo make -j2
 	sudo make install
 	sudo ldconfig -v

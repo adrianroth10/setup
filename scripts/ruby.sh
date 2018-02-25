@@ -14,3 +14,5 @@ add_lines ~/.bashrc "# rbenv, adding to path and stuff
 export PATH=\"\$HOME/.rbenv/bin:\$PATH\"
 eval \"\$(rbenv init -)\"
 export PATH=\"\$HOME/.rbenv/plugins/ruby-build/bin:\$PATH\""
+
+cp $DIR/.inline_css.rb ~/.inline_css.rb
