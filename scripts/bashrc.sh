@@ -8,7 +8,7 @@ add_lines ~/.bashrc "function mkcd { dir=\"\$*\"; mkdir -p \"\$dir\" && cd \"\$d
 # Aliases
 alias ..=\"cd ..\"
 alias ...=\"cd ../..\"
-alias go=\"gnome-open\"
+alias go=\"xdg-open\"
 alias gccw=\"/opt/mingw32/bin/i686-w64-mingw32-gcc\"
 alias sprint=\"vim ~/scrum/sprintbacklog*\"
 alias xd=\"xinput disable 13\"
@@ -24,6 +24,14 @@ alias gp=\"git push\"
 # extra paths
 export PATH=\"/usr/local/MATLAB/R2016b/bin:\$PATH\"
 export PATH=\"\$HOME/scrum/scrumapp/bin:\$PATH\"
+
+# ROOT aliases
+alias root=\"root -l\"
+alias root_valgrind=\"valgrind --tool=memcheck --suppressions=$ROOTSYS/etc/valgrind-root.supp --log-file=log --leak-check=full\"
+
+alias fetch_pwds=\"scp anton@xi.nuclear.lu.se:/home/anton/Documents/småttogott/importantos.kdbx ~/Documents/Övrigt/Computer\"
+alias send_pwds=\"scp ~/Documents/Övrigt/Computer/importantos.kdbx anton@xi.nuclear.lu.se:/home/anton/Documents/småttogott/importantos.kdbx\"
+
 
 "
 # Matlab will be removed

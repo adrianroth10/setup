@@ -11,8 +11,12 @@ source ~/.bashrc
 # setting up jupyter-lab
 #conda install -y -c conda-forge jupyterlab
 
-# somehow for extensions
+# Packages for extensions and ...
 conda -c conda-forge install nodejs
+conda -c conda-forge install uncertainties
+
+#This makes it possible to install more packages to the standard anaconda 
+sudo chown -R $USER anaconda3
 
 # adding vim key binding for the notebook
 # Create required directory in case (optional)
@@ -28,3 +32,7 @@ conda -c conda-forge install nodejs
 
 #Environment for ROOTPY
 #conda create --name=ROOTENV python=3.4 ipykernel
+
+#This application failed to start because it could not find or load the Qt platform plugin "xcb"in "".
+# see https://stackoverflow.com/questions/33051790/anaconda-python-could-not-find-or-load-the-qt-platform-plugin-xcb
+
