@@ -8,9 +8,12 @@ $PACKAGE_INSTALL \
 	python-scipy \
 	python2.7 \
 	python-dev \
-	python-pip \
-	python3-pip \
 	python-skimage \
+	python-pip \
+	python3-matplotlib \
+	python3-numpy \
+	python3-scipy \
+	python3-pip \
 
 add_lines ~/.pythonrc.py "import numpy as np
 import matplotlib.pyplot as plt"
