@@ -4,7 +4,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Run `bear make` to create a compilation database for your c/c++ project. Semantic autocompletion works!
 git_clone_or_pull https://github.com/rizsotto/Bear.git ~/.bear
-mkdir ~/.bear/build
+mkdir -p ~/.bear/build
 cd ~/.bear/build
 cmake ../
 sudo make all

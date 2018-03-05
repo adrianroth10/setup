@@ -3,17 +3,17 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
 $PACKAGE_INSTALL \
+	python-pip \
+	python3-pip \
 	python-matplotlib \
 	python-numpy \
 	python-scipy \
 	python2.7 \
 	python-dev \
 	python-skimage \
-	python-pip \
 	python3-matplotlib \
 	python3-numpy \
 	python3-scipy \
-	python3-pip \
 
 add_lines ~/.pythonrc.py "import numpy as np
 import matplotlib.pyplot as plt"

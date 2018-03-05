@@ -5,42 +5,42 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #Not sure about this. Do python2 or 3 or both. 
 #In jupyter it seems like python2 and 3 are enabled.
 
-$PACKAGE_INSTALL ipython ipython-notebook
+$PACKAGE_INSTALL python-pip python3-pip ipython ipython-notebook
 
 #-U means upgrade all packages to the newest available version
 
-sudo pip install  -U jupyter
-sudo pip3 install -U jupyter
+sudo -H pip install  -U jupyter
+sudo -H pip3 install -U jupyter
 
-sudo pip install  -U numpy
-sudo pip3 install -U numpy
+sudo -H pip install  -U numpy
+sudo -H pip3 install -U numpy
 
-sudo pip install  -U scipy
-sudo pip3 install -U scipy
+sudo -H pip install  -U scipy
+sudo -H pip3 install -U scipy
 
-sudo pip install  -U matplotlib
-sudo pip3 install -U matplotlib
+sudo -H pip install  -U matplotlib
+sudo -H pip3 install -U matplotlib
 
-sudo pip install  -U matplotlib
-sudo pip3 install -U matplotlib
+sudo -H pip install  -U matplotlib
+sudo -H pip3 install -U matplotlib
 
 #Deprecated by jupyter API = nbconvert
 #sudo pip install  -U runipy
 #sudo pip3 install -U runipy
 
-sudo pip install  -U notedown
-sudo pip3 install -U notedown
+sudo -H pip install  -U notedown
+sudo -H pip3 install -U notedown
 
-sudo pip install  -U bqplot
-sudo pip3 install -U bqplot
-sudo jupyter nbextension enable --py --sys-prefix bqplot
+sudo -H pip install  -U bqplot
+sudo -H pip3 install -U bqplot
+sudo -H jupyter nbextension enable --py --sys-prefix bqplot
 
-sudo pip install  -U ipywidgets
-sudo pip3 install -U ipywidgets
-jupyter nbextension enable --py widgetsnbextension --sys-prefix
+sudo -H pip install  -U ipywidgets
+sudo -H pip3 install -U ipywidgets
+sudo -H jupyter nbextension enable --py widgetsnbextension --sys-prefix
 
-sudo pip install  -U matplotlib
-sudo pip3 install -U matplotlib
+sudo -H pip install  -U matplotlib
+sudo -H pip3 install -U matplotlib
 
 
 #sudo pip install -U  plotly

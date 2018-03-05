@@ -13,7 +13,7 @@ cp $DIR/.vimrc ~/.vimrc
 vim +PluginInstall +qall >/dev/null
 
 #Configuring youcompleteme for c-family languages https://stackoverflow.com/questions/16264047/vim-youcompleteme-configuration
-.~/.vim/bundle/youcompleteme/install.py --clang-completer
+#.~/.vim/bundle/youcompleteme/install.py --clang-completer
 ##for arch linux the above line needs to be:
 #python3 install.py --system-libclang --all
 

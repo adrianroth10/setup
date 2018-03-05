@@ -17,7 +17,6 @@ inkscape.sh
 sdl.sh
 bear.sh
 jupyter.sh
-java.sh
 julia.sh
 latex.sh
 pandoc.sh
@@ -26,6 +25,5 @@ cuda.sh
 python.sh
 R.sh
 opencv.sh
-mysql.sh
 haskell.sh
 ruby.sh
