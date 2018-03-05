@@ -1,5 +1,6 @@
 arduino
 arduino-mk
+blender
 bluez
 clamtk
 cmake
@@ -16,7 +17,6 @@ curl.sh
 inkscape.sh
 sdl.sh
 bear.sh
-jupyter.sh
 julia.sh
 latex.sh
 pandoc.sh
@@ -24,6 +24,5 @@ yaml.sh
 cuda.sh
 python.sh
 R.sh
-opencv.sh
 haskell.sh
 ruby.sh

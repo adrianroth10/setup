@@ -7,7 +7,7 @@ if [ "$F" == "ff" ]; then
 	rm -rf ~/.yaml 
 fi
 
-git clone https://github.com/jbeder/yaml-cpp.git ~/.yaml_cpp
+git_clone_or_pull https://github.com/jbeder/yaml-cpp.git ~/.yaml_cpp
 cd ~/.yaml_cpp
 
 #Follow README for build at fixed location
@@ -17,8 +17,8 @@ cmake -DBUILD_SHARED_LIBS=OFF ..
 sudo make 
 sudo make install
 
-sudo pip install pyyaml
-sudo pip3 install pyyaml
-
+$PACKAGE_INSTALL python-pip python3-pip
+sudo -H pip install pyyaml
+sudo -H pip3 install pyyaml
 
 #https://pyyaml.org/wiki/PyYAMLDocumentation

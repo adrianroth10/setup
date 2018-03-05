@@ -12,18 +12,6 @@ $PACKAGE_INSTALL python-pip python3-pip ipython ipython-notebook
 sudo -H pip install  -U jupyter
 sudo -H pip3 install -U jupyter
 
-sudo -H pip install  -U numpy
-sudo -H pip3 install -U numpy
-
-sudo -H pip install  -U scipy
-sudo -H pip3 install -U scipy
-
-sudo -H pip install  -U matplotlib
-sudo -H pip3 install -U matplotlib
-
-sudo -H pip install  -U matplotlib
-sudo -H pip3 install -U matplotlib
-
 #Deprecated by jupyter API = nbconvert
 #sudo pip install  -U runipy
 #sudo pip3 install -U runipy
@@ -38,10 +26,6 @@ sudo -H jupyter nbextension enable --py --sys-prefix bqplot
 sudo -H pip install  -U ipywidgets
 sudo -H pip3 install -U ipywidgets
 sudo -H jupyter nbextension enable --py widgetsnbextension --sys-prefix
-
-sudo -H pip install  -U matplotlib
-sudo -H pip3 install -U matplotlib
-
 
 #sudo pip install -U  plotly
 #sudo pip3 install -U plotly
