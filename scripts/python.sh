@@ -16,8 +16,7 @@ export PYTHONSTARTUP=~/.pythonrc.py"
 
 sudo -H pip install --upgrade pip
 
-sudo -H pip install -U \
-	matplotlib \
+PACKAGES=( matplotlib \
 	numpy \
 	scipy \
 	scikit-image \
@@ -25,13 +24,9 @@ sudo -H pip install -U \
 	numpy \
 	scipy \
 	imutils \
+	pyyaml \
+	uncertainties \
+	)
 
-sudo -H pip3 install -U \
-	matplotlib \
-	numpy \
-	scipy \
-	scikit-image \
-	matplotlib \
-	numpy \
-	scipy \
-	imutils \
+sudo -H pip install -U ${PACKAGES[@]}
+sudo -H pip3 install -U ${PACKAGES[@]}
