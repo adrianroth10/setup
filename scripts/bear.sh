@@ -15,5 +15,6 @@ sudo make package
 
 #For local install, i.e. no root access, add the following to the bashrc
 ## path to bear and execution alias
-#export PATH="/home/anton/.bear/build/bear:$PATH"
-#alias bear="bear -l /home/anton/.bear/build/libear/libear.so"
+#export PATH="~/.bear/build/bear:$PATH"
+#alias bear="bear -l ~/.bear/build/libear/libear.so"
+

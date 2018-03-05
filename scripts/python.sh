@@ -8,30 +8,34 @@ $PACKAGE_INSTALL \
 	python-pip \
 	python3-pip \
 	python-dev \
+	ipython \
+	ipython-notebook \
 
 add_lines ~/.pythonrc.py "import numpy as np
 import matplotlib.pyplot as plt"
 add_lines ~/.bashrc "# python
 export PYTHONSTARTUP=~/.pythonrc.py"
 
+PACKAGES=( matplotlib \
+	numpy \
+	scipy \
+	scikit-image \
+	matplotlib \
+	numpy \
+	scipy \
+	imutils \
+	pyyaml \
+	uncertainties \
+	jupyter \
+	notedown \
+	bqplot \
+	ipywidgets \
+	)
+
+#-U means upgrade all packages to the newest available version
 sudo -H pip install --upgrade pip
+sudo -H pip install -U ${PACKAGES[@]}
+sudo -H pip3 install -U ${PACKAGES[@]}
 
-sudo -H pip install -U \
-	matplotlib \
-	numpy \
-	scipy \
-	scikit-image \
-	matplotlib \
-	numpy \
-	scipy \
-	imutils \
-
-sudo -H pip3 install -U \
-	matplotlib \
-	numpy \
-	scipy \
-	scikit-image \
-	matplotlib \
-	numpy \
-	scipy \
-	imutils \
+sudo -H jupyter nbextension enable --py --sys-prefix bqplot
+sudo -H jupyter nbextension enable --py widgetsnbextension --sys-prefix

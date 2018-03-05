@@ -16,9 +16,3 @@ cd build
 cmake -DBUILD_SHARED_LIBS=OFF ..
 sudo make 
 sudo make install
-
-$PACKAGE_INSTALL python-pip python3-pip
-sudo -H pip install pyyaml
-sudo -H pip3 install pyyaml
-
-#https://pyyaml.org/wiki/PyYAMLDocumentation
