@@ -17,7 +17,7 @@ $PACKAGE_INSTALL \
 	hdf5-tools
 
 export JULIA_PKGDIR="$HOME/.julia_pkg"
-~/.julia/julia $DIR/julia.jl
+julia $DIR/julia.jl
 
 add_lines ~/.bashrc "# julia
 export JULIA_PKGDIR=\"/home/rotharen/.julia_pkg\"
