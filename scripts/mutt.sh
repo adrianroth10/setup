@@ -1,4 +1,5 @@
 #!/bin/bash
+# Verbose
 # Only works for gmail accounts
 # Encrypts your password using gpg in file ~/.password for your account
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"

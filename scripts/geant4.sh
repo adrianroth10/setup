@@ -1,10 +1,9 @@
 #!/bin/bash
-
-VERSION="geant4-10.3-release"
-
 # Currently has a bug where the sudo password must be written twice
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
+
+VERSION="geant4-10.3-release"
 
 if [ "$F" == "ff" ]; then
 	rm -rf ~/.geant4 

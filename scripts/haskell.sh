@@ -1,5 +1,5 @@
 #!/bin/bash
-# Installing the haskell, this means haskell stack, cabal and haste
+# Installing the haskell, this means haskell stack, cabal and haste compiler (v 0.5.5.1)
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 

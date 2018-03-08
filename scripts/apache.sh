@@ -1,5 +1,5 @@
 #!/bin/bash
-# Installing the apache server with php compatibility
+# Installing the apache server with php compatability
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 

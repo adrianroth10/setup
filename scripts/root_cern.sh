@@ -1,6 +1,5 @@
 #!/bin/bash
-
-#VERSION="v6-04-18"
+# VERSION="v6-04-18"
 VERSION="v6-08-06"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh

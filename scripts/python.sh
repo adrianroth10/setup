@@ -1,4 +1,5 @@
 #!/bin/bash
+# Both python 2 and 3 with basic packages
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
