@@ -7,19 +7,19 @@
 
 # Author = Adrian Roth
 
-# Version 1.1
+# Version 1.2
 
 # Pre
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 LOG=$DIR/setup.log
 . $DIR/extras/functions.sh
 function error_trap {
-	printf "\n${RED}	Error occured!"
-	printf "\n	See setup.log\n${NO_COLOR}"
-	pkill vlc
 	if [ $PID ]; then
 		kill $PID
 	fi
+	printf "\n${RED}	Error occured!"
+	printf "\n	See setup.log\n${NO_COLOR}"
+	pkill vlc
 }
 trap 'error_trap' ERR
 
@@ -69,15 +69,19 @@ L=${#SCRIPTS[@]}
 for ((i=0;i<L;i++))
 do
 	FILE=$(basename ${SCRIPTS[$i]} .sh)
-	DATE=`date +%s`
-	stopwatch $DATE "[$i/$L] Installing $FILE" &
-	PID=$!
-	disown
-
 	sudo -v
-	${SCRIPTS[$i]} -$F >>$LOG 2>>$LOG
+	VERBOSE=$(cat ${SCRIPTS[$i]} | sed -n 2p)
+	if [ ! "$VERBOSE" == "# Verbose" ]; then
+		DATE=`date +%s`
+		stopwatch $DATE "[$i/$L] Installing $FILE" &
+		PID=$!
+		disown
+		${SCRIPTS[$i]} -$F >>$LOG 2>>$LOG
+		kill $PID
+	else
+		${SCRIPTS[$i]} -$F
+	fi
 
-	kill $PID
 	printf "${CURSOR_UP}${CLEAR_LINE}${GREEN}	%-30s %-30s\n\n${NO_COLOR}" "$FILE done" $(date -u --date @$((`date +%s` - $DATE)) +%H:%M:%S)
 done
 

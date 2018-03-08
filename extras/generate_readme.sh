@@ -26,7 +26,9 @@ for SCRIPT in $SCRIPTS; do
 	done < $SCRIPT
 done
 
-printf "\n\n## Examples
+printf "\nVerbose means that the script needs input from the command line and can't be piped to log file.
+
+\n\n## Examples
 To install all scripts just run \`./setup.sh\`
 Then to run a subset of the scripts in a certain order declared in \`file\` run either
 \`\`\`
@@ -36,6 +38,6 @@ or
 \`\`\`
 ./setup.sh -i file
 \`\`\`
-The input file also handles packages to be installed using the package manager. Just write the name as you would after for example \`sudo apt-get install\`
+The input file can also handle packages to be installed using the package manager. Just write the name as you would after for example \`sudo apt-get install\`
 
 For further information try \`./setup.sh -h\`" >> $FILE

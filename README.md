@@ -7,46 +7,54 @@ The background music have been provided by http://www.bensound.com
 
 ## Available scripts
 * curl.sh 
-* bashrc.sh 
-  - Adding some useful aliases and exports to .bashrc
-* sdl.sh 
-* geant4.sh 
-* iphone.sh 
+* haskell.sh 
+  - Installing the haskell, this means haskell stack, cabal and haste compiler (v 0.5.5.1)
+* root_cern.sh 
+  - VERSION="v6-04-18"
+* android-file-transfer.sh 
+* R.sh 
+* keepassx2.sh 
 * mutt.sh 
+  - Verbose
   - Only works for gmail accounts
   - Encrypts your password using gpg in file ~/.password for your account
-* spotify.sh 
-* java.sh 
-* root_cern.sh 
 * julia.sh 
-* latex.sh 
-* google_chrome.sh 
-* keepassx2.sh 
-  - Following: http://ubuntuhandbook.org/index.php/2015/12/install-keepassx-2-0-in-ubuntu-16-04-15-10-14-04/
+* sdl.sh 
+* anaconda.sh 
+* geant4.sh 
+  - Currently has a bug where the sudo password must be written twice
+* pandoc.sh 
+* apache.sh 
+  - Installing the apache server with php compatability
+* skype.sh 
+* python.sh 
+  - Both python 2 and 3 with basic packages
+* mendeley.sh 
+* pyne.sh 
+* ruby.sh 
+  - Includes ruby function for inlining css in html
+* opencv.sh 
+* mysql.sh 
+  - Verbose
+* spotify.sh 
+* inkscape.sh 
+* yaml_cpp.sh 
+* bashrc.sh 
+  - Adding some useful aliases and exports to .bashrc
+* bear.sh 
+* cuda.sh 
+  - Installation of the cuda drivers
+  - Will probably only work on an 64bit ubuntu 16.04 system with certain GPU:s
 * vim.sh 
   - Will overwrite your current .vimrc file if any exists
-* python.sh 
-* R.sh 
-* opencv.sh 
-  - Currently has a bug where the sudo password must be written twice
-* mysql.sh 
-* haskell.sh 
-  - Installing the haskell, this means haskell stack, cabal and haste
-* ruby.sh 
-* keepassx2.sh
-  - Installs version 2 of keepassx which e.g. can handle `.kdbx` files. 
-* mendeley.sh
-* root_cern.sh 
-  - Complete build of the desired version.
-  - Add export variable to your `.bashrc`.
-  - Need sudo password at least once.
-* geant4.sh 
-  - Complete build of the desired version.
-  - Add export variable to your `.bashrc`.
-* inkscape.sh
-  - Includes the _textext_ extension for Latex editing.
-* python_extensions.sh
-  * Installs PyNE and uncertainties.
+* vim_anton.sh 
+  - Will overwrite your current .vimrc file if any exists
+* latex.sh 
+* google_chrome.sh 
+* java.sh 
+  - Verbose
+
+Verbose means that the script needs input from the command line and can't be piped to log file.
 
 
 
@@ -60,6 +68,6 @@ or
 ```
 ./setup.sh -i file
 ```
-The input file also handles packages to be installed using the package manager. Just write the name as you would after for example `sudo apt-get install`
+The input file can also handle packages to be installed using the package manager. Just write the name as you would after for example `sudo apt-get install`
 
 For further information try `./setup.sh -h`
