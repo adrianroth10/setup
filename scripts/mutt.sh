@@ -28,8 +28,8 @@ printf "#!/bin/sh\n" > ~/.mutt_exec.sh
 if [ $PASSWORD ]; then
 	rm -f ~/.password
 	printf "export GMAIL_PASSWORD=\"%s\"" "$PASSWORD" > ~/.password_temp
-	printf "Set Password for logging into mutt\n"
-	gpg --no-use-agent --output ~/.password --symmetric ~/.password_temp
+	rm -f ~/.password
+	gpg --batch --passphrase $PASSWORD --no-use-agent --output ~/.password --symmetric ~/.password_temp
 	rm -f ~/.password_temp
 
 	printf "
