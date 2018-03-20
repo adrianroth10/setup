@@ -13,3 +13,5 @@ $PACKAGE_INSTALL \
 	texlive-publishers-doc \
 	texlive-science \
 	texlive-xetex \
+	texlive-extra-utils \
+	tex4ht \
