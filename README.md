@@ -38,7 +38,11 @@ The background music have been provided by http://www.bensound.com
   - Verbose
 * spotify.sh 
 * inkscape.sh 
+* firefox-esr.sh 
+  - Installing the extended support release
 * yaml_cpp.sh 
+* compiz.sh 
+  - Window manager on linux
 * bashrc.sh 
   - Adding some useful aliases and exports to .bashrc
 * bear.sh 
