@@ -4,6 +4,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
 if [ "$F" == "f" ] || ! command -v rbenv ; then
+	$PACKAGE_INSTALL libssl-dev libreadline-dev
 	git_clone_or_pull https://github.com/rbenv/rbenv.git ~/.rbenv
 	git_clone_or_pull https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 	~/.rbenv/bin/rbenv install 2.3.0

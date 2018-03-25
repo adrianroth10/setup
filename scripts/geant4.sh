@@ -9,7 +9,7 @@ if [ "$F" == "ff" ]; then
 	rm -rf ~/.geant4 
 fi
 
-if [ "$F" == "f" ]; then
+if [ "$F" == "f" ] || [ "$F" == "ff" ]; then
 	#These are from: https://na58-project-tgeant.web.cern.ch/content/step-step-installation-ubuntu
 	$PACKAGE_INSTALL \
 		libexpat1-dev \
