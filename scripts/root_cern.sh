@@ -27,7 +27,7 @@ fi
 
 #The last packages are from: https://na58-project-tgeant.web.cern.ch/content/step-step-installation-ubuntu
 #Commented cannot be installed for some reason.
-if [ "$F" == "f" ]; then
+if [ "$F" == "f" ] || [ "$F" == "ff" ] ; then
 	$PACKAGE_INSTALL \
 		git \
 		dpkg-dev \

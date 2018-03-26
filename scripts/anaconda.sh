@@ -2,21 +2,31 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
-wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
-bash Anaconda3-5.0.1-Linux-x86_64.sh
-rm Anaconda3-5.0.1-Linux-x86_64.sh
+#wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
+#bash Anaconda3-5.0.1-Linux-x86_64.sh
+#rm Anaconda3-5.0.1-Linux-x86_64.sh
+
+#This makes it possible to install more packages to the standard anaconda 
+sudo chown -R $USER ~/anaconda3
 
 source ~/.bashrc
 
 # setting up jupyter-lab
-#conda install -y -c conda-forge jupyterlab
+conda install -y -c conda-forge jupyterlab
 
-# Packages for extensions and ...
-conda -c conda-forge install nodejs
-conda -c conda-forge install uncertainties
+#Further conda-forge packages
+conda install -y -c conda-forge \
+	nodejs \
+	uncertainties
+	
+conda install -y -c conda-forge -c pyne pyne=0.5.11
 
-#This makes it possible to install more packages to the standard anaconda 
-sudo chown -R $USER anaconda3
+# enable python2 in jupyter
+conda create -n ipykernel_py2 python=2 ipykernel
+source activate ipykernel_py2    # On Windows, remove the word 'source'
+python -m ipykernel install --user
+
+
 
 # adding vim key binding for the notebook
 # Create required directory in case (optional)
