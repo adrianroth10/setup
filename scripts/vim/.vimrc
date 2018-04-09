@@ -62,6 +62,6 @@ autocmd FileType plaintex,tex setlocal spell! spelllang=en_gb
 
 " Setting tabwidths
 autocmd FileType c setlocal shiftwidth=8 tabstop=8
-autocmd FileType python,cabal setlocal shiftwidth=4 softtabstop=4 expandtab
-autocmd FileType r,ruby,eruby,plaintex,tex,matlab,yaml,scss,haskell setlocal shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab
+autocmd FileType r,ruby,eruby,plaintex,tex,matlab,yaml,scss,haskell,cabal setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType c,cpp,java,php,r,ruby,eruby,plaintex,tex,matlab,yaml,make,haskell autocmd BufWritePre <buffer> :%s/\s\+$//e
