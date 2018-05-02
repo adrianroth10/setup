@@ -7,7 +7,7 @@ if [ "$F" == "f" ] || ! command -v stack ; then
 	curl -sSL https://get.haskellstack.org/ | sh -s - -f
 fi
 $PACKAGE_INSTALL haskell-platform hlint
-add_lines ~/.bashrc "export PATH=\"~/.cabal/bin:\$PATH\""
+add_lines ~/.bashrc "# cabal\nexport PATH=\"~/.cabal/bin:\$PATH\""
 cabal update 
 cabal install lhs2tex
 
