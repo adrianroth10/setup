@@ -9,6 +9,7 @@ packages = [
 	    "ProfileView"
 	    "PyPlot"
 	    "Roots"
+	    "Dates"
 	    ]
 for package in packages
 	Pkg.add(package)
