@@ -9,6 +9,7 @@ $PACKAGE_INSTALL \
 	texlive-lang-european \
 	texlive-latex-base \
 	texlive-latex-extra \
+	texlive-math-extra \
 	texlive-publishers \
 	texlive-publishers-doc \
 	texlive-science \
