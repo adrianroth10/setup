@@ -8,6 +8,7 @@ $PACKAGE_INSTALL \
 	python3.5 \
 	python-pip \
 	python3-pip \
+	python3-tk \
 	python-dev \
 	ipython \
 	ipython-notebook \
@@ -24,6 +25,7 @@ PACKAGES=( matplotlib \
 	matplotlib \
 	numpy \
 	scipy \
+	imageio \
 	imutils \
 	pyyaml \
 	uncertainties \
