@@ -11,7 +11,7 @@ sudo chown -R $USER ~/anaconda3
 
 source ~/.bashrc
 
-$PACKAGE_INSTALL -y nodejs
+$PACKAGE_INSTALL nodejs
 
 conda install -y -c conda-forge -c damianavila82 \
 	jupyterlab \
@@ -29,9 +29,9 @@ conda install -y -c conda-forge -c damianavila82 \
 conda install -y -c conda-forge -c pyne pyne=0.5.11
 
 # enable python2 in jupyter
-conda create -n ipykernel_py2 python=2 ipykernel
-source activate ipykernel_py2    # On Windows, remove the word 'source'
-python -m ipykernel install --user
+#conda create -n ipykernel_py2 python=2 ipykernel
+#source activate ipykernel_py2    # On Windows, remove the word 'source'
+#python -m ipykernel install --user
 
 # pip packages
 pip --no-cache-dir install \
@@ -56,10 +56,15 @@ jupyter labextension install @jupyterlab/google-drive
 jupyter labextension install @jupyterlab/hub-extension
 jupyter labextension install @jupyter-widgets/jupyterlab-manager
 jupyter labextension install jupyterlab_iframe
+jupyter serverextension enable --py jupyterlab_iframe
 jupyter labextension install @mflevine/jupyterlab_html
 jupyter labextension install @jupyterlab/latex
+jupyter serverextension enable --sys-prefix jupyterlab_latex
 jupyter labextension install @jupyterlab/github
+jupyter serverextension enable --sys-prefix jupyterlab_github
 jupyter labextension install jupyterlab_templates
+jupyter serverextension enable --py jupyterlab_templates
+jupyter serverextension enable --sys-prefix jupyterlab_discovery
 jupyter labextension install @jupyterlab/plotly-extension
 jupyter labextension install jupyterlab-toc
 jupyter labextension install jupyterlab_bokeh
