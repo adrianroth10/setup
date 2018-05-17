@@ -12,6 +12,8 @@ $PACKAGE_INSTALL \
 	python-dev \
 	ipython \
 	ipython-notebook \
+	cython \
+	cython3 \
 
 add_lines ~/.pythonrc.py "import numpy as np
 import matplotlib.pyplot as plt"
