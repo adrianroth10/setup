@@ -39,6 +39,7 @@ PACKAGES=( matplotlib \
 
 #-U means upgrade all packages to the newest available version
 sudo -H pip install --upgrade pip
+sudo -H pip3 install --upgrade pip
 sudo -H pip install -U ${PACKAGES[@]}
 sudo -H pip3 install -U ${PACKAGES[@]}
 
