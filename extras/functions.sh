@@ -48,12 +48,13 @@ function stopwatch {
 }
 
 function printHelp {
-	printf "Usage:	$(basename "$0") [-h] [-f[f]] [-i file]
+	printf "Usage:	$(basename "$0") [-h] [-m] [-f[f]] [-i file]
 	$(basename "$0") file
 	-- scripts to install and setup programs on your ubuntu machine
 
 where:
 	-h show this help text
+	-m install with music (only in setup.sh)
 	-f soft reinstallation of programs
 	-ff full reinstallation of program
 	-i install subset of programs named in file
@@ -61,7 +62,7 @@ where:
 }
 
 function getOpts {
-	while getopts ":fhi:" opt; do
+	while getopts ":fmhi:" opt; do
 		case $opt in
 			f)
 				F=${F}f
@@ -69,6 +70,9 @@ function getOpts {
 			h)
 				printHelp
 				exit 0
+				;;
+			m)
+				M=m
 				;;
 			i)
 				I=$OPTARG
