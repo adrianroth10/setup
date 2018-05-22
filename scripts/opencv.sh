@@ -92,19 +92,14 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # see http://www.python36.com/how-to-install-opencv340-on-ubuntu1604/
 
 #prerequisites
-sudo apt-get install build-essential 
-sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
-
-sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
-
-sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
-sudo apt-get install libxvidcore-dev libx264-dev
-
-sudo apt-get install libgtk-3-dev
-
-sudo apt-get install libatlas-base-dev gfortran pylint
-
-sudo apt-get install python2.7-dev python3.5-dev
+$PACKAGE_INSTALL install build-essential 
+$PACKAGE_INSTALL install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+$PACKAGE_INSTALL install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-22-dev
+$PACKAGE_INSTALL install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+$PACKAGE_INSTALL install libxvidcore-dev libx264-dev
+$PACKAGE_INSTALL install libgtk-3-dev
+$PACKAGE_INSTALL install libatlas-base-dev gfortran pylint
+$PACKAGE_INSTALL install python2.7-dev python3.5-dev
 
 # Downloading and unziping
 cd ~

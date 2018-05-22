@@ -11,7 +11,6 @@ $PACKAGE_INSTALL \
 	python3-tk \
 	python-dev \
 	ipython \
-	ipython-notebook \
 	cython \
 	cython3 \
 
