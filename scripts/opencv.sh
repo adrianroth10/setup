@@ -99,7 +99,7 @@ $PACKAGE_INSTALL install libavcodec-dev libavformat-dev libswscale-dev libv4l-de
 $PACKAGE_INSTALL install libxvidcore-dev libx264-dev
 $PACKAGE_INSTALL install libgtk-3-dev
 $PACKAGE_INSTALL install libatlas-base-dev gfortran pylint
-$PACKAGE_INSTALL install python2.7-dev python3.5-dev
+$PACKAGE_INSTALL install python2.7-dev python3.7-dev
 
 # Downloading and unziping
 cd ~
