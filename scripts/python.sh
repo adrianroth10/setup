@@ -13,11 +13,17 @@ $PACKAGE_INSTALL \
 	ipython \
 	cython \
 	cython3 \
+	python-launchpadlib \
+	python3-launchpadlib \
+	python-testresources \
+	python3-testresources \
 
 add_lines ~/.pythonrc.py "import numpy as np
 import matplotlib.pyplot as plt"
 add_lines ~/.bashrc "# python
-export PYTHONSTARTUP=~/.pythonrc.py"
+export PYTHONSTARTUP=~/.pythonrc.py
+alias python=python3
+"
 
 PACKAGES=( matplotlib \
 	numpy \

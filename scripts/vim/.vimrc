@@ -6,14 +6,9 @@ call vundle#begin()
 " This is the Vundle package, which can be found on GitHub.
 " For GitHub repos, you specify plugins using the
 " 'user/repository' format
-Plugin 'Buffergator'
-Plugin 'derekwyatt/vim-scala'
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'gerw/vim-latex-suite'
 Plugin 'gmarik/vundle'
-Plugin 'JuliaEditorSupport/julia-vim'
-Plugin 'marcweber/vim-addon-mw-utils'
-Plugin 'matchit.zip'
 Plugin 'Rename'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
@@ -40,9 +35,6 @@ let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats = 'pdf, aux'
 let g:Tex_ViewRule_pdf = 'evince'
 let g:tex_flavor = 'latex'
-
-"python-mode
-let g:pymode_rope_completion = 0
 
 " Some other things
 color desert
