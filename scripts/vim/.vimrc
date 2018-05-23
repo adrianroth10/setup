@@ -29,6 +29,7 @@ nmap <s-enter> O<esc
 
 "let's the syntastic check for c++11 methods
 let g:syntastic_cpp_compiler_options = '-std=c++11'
+let g:syntastic_python_checkers = ['pyflakes']
 
 "vim-latex-suite
 let g:Tex_DefaultTargetFormat = 'pdf'
