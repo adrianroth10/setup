@@ -35,6 +35,7 @@ PACKAGES=( matplotlib \
 	bqplot \
 	ipywidgets \
 	flake8 \
+	pylint \
 	)
 
 #-U means upgrade all packages to the newest available version
