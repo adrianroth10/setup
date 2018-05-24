@@ -6,6 +6,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 $PACKAGE_INSTALL \
 	python3.5 \
 	python3-pip \
+	python3-venv \
 	python3-tk \
 	ipython \
 	cython3 \
@@ -22,16 +23,13 @@ export PYTHONSTARTUP=~/.pythonrc.py
 PACKAGES=( matplotlib \
 	numpy \
 	scipy \
+	jupyter \
+	notedown \
 	scikit-image \
-	matplotlib \
-	numpy \
-	scipy \
 	imageio \
 	imutils \
 	pyyaml \
 	uncertainties \
-	jupyter \
-	notedown \
 	bqplot \
 	ipywidgets \
 	flake8 \
