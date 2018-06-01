@@ -7,6 +7,7 @@ cmake
 imagemagick
 keepassx
 make
+parallel
 silversearcher-ag
 stellarium
 unrar
