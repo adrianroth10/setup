@@ -38,7 +38,6 @@ if [ "$M" == "m" ] && ! ps -e | grep vlc > /dev/null ; then
 	printf "${WHITE}Turning on some music\n${NO_COLOR}"
 	cvlc --quiet -L $DIR/background_music/* >>$LOG 2>>$LOG & 
 fi
-exit
 
 printf "${WHITE}apt-get update and upgrade\n${NO_COLOR}"
 $PACKAGE_UPDATE >>$LOG 2>>$LOG
@@ -102,6 +101,8 @@ fi
 printf "${CURSOR_UP}${CLEAR_LINE}${GREEN}\n	%-30s %-30s\n\n${NO_COLOR}" "All done" $(date -u --date @$((`date +%s` - $START)) +%H:%M:%S)
 
 # Kill the music
-pkill vlc
+if [ "$M" == "m" ] && ps -e | grep vlc > /dev/null ; then
+	pkill vlc
+fi
 
 # END

@@ -1,4 +1,5 @@
 #!/bin/bash
+# Verbose
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
@@ -91,31 +92,37 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Version which seems to work for opencv 3.4.0, script not tested
 # see http://www.python36.com/how-to-install-opencv340-on-ubuntu1604/
 
-#prerequisites
-$PACKAGE_INSTALL install build-essential 
-$PACKAGE_INSTALL install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
-$PACKAGE_INSTALL install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-22-dev
-$PACKAGE_INSTALL install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
-$PACKAGE_INSTALL install libxvidcore-dev libx264-dev
-$PACKAGE_INSTALL install libgtk-3-dev
-$PACKAGE_INSTALL install libatlas-base-dev gfortran pylint
-$PACKAGE_INSTALL install python2.7-dev python3.7-dev
+if [ "$F" == "f" ] || ! command -v opencv_version ; then
+	#prerequisites
+	$PACKAGE_INSTALL build-essential 
+	$PACKAGE_INSTALL cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+	$PACKAGE_INSTALL python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-22-dev
+	$PACKAGE_INSTALL libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+	$PACKAGE_INSTALL libxvidcore-dev libx264-dev
+	$PACKAGE_INSTALL libgtk-3-dev
+	$PACKAGE_INSTALL libatlas-base-dev gfortran pylint
+	$PACKAGE_INSTALL python2.7-dev python3.7-dev
 
-# Downloading and unziping
-cd ~
-wget https://github.com/opencv/opencv/archive/3.4.0.zip -O opencv-3.4.0.zip
-wget https://github.com/opencv/opencv_contrib/archive/3.4.0.zip -O opencv_contrib-3.4.0.zip
+	# Downloading and unziping
+	cd ~
+	wget https://github.com/opencv/opencv/archive/3.4.0.zip -O opencv-3.4.0.zip
+	wget https://github.com/opencv/opencv_contrib/archive/3.4.0.zip -O opencv_contrib-3.4.0.zip
 
-sudo apt-get install unzip
-unzip opencv-3.4.0.zip
-unzip opencv_contrib-3.4.0.zip
+	$PACKAGE_INSTALL unzip
+	unzip opencv-3.4.0.zip
+	unzip opencv_contrib-3.4.0.zip
+	mv opencv-3.4.0 .opencv-3.4.0
+	mv opencv_contrib-3.4.0 .opencv_contrib-3.4.0
 
-# Making and building
-cd opencv-3.4.0
-mkdir build
-cd build
-cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local -DOPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-3.4.0/modules -DOPENCV_ENABLE_NONFREE=True ..
+	# Making and building
+	cd .opencv-3.4.0
+	mkdir build
+	cd build
+	cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local -DOPENCV_EXTRA_MODULES_PATH=../../.opencv_contrib-3.4.0/modules -DOPENCV_ENABLE_NONFREE=True ..
 
-make -j4
-sudo make install
-sudo ldconfig
+	make -j4
+	sudo make install
+	sudo ldconfig
+
+	rm -rf opencv-3.4.0.zip opencv_contrib-3.4.0.zip
+fi

@@ -17,10 +17,10 @@ read NAME
 printf "Gmail address: "
 read EMAIL
 EMAIL_SUFFIX="${EMAIL%%@*}"
-if [ "${EMAIL##*@}" != "gmail.com" ]; then
-	printf "${RED}This setup only works for gmail accounts\n${NO_COLOR}"
-	exit 1
-fi
+# if [ "${EMAIL##*@}" != "gmail.com" ]; then
+# 	printf "${RED}This setup only works for gmail accounts\n${NO_COLOR}"
+# 	exit 1
+# fi
 
 printf "Password (put blank if you don't trust the script): "
 read -s PASSWORD
@@ -30,7 +30,7 @@ if [ $PASSWORD ]; then
 	rm -f ~/.password
 	printf "export GMAIL_PASSWORD=\"%s\"" "$PASSWORD" > ~/.password_temp
 	rm -f ~/.password
-	gpg --batch --passphrase $PASSWORD --no-use-agent --output ~/.password --symmetric ~/.password_temp
+	gpg --batch --passphrase $PASSWORD --output ~/.password --symmetric ~/.password_temp
 	rm -f ~/.password_temp
 
 	printf "
