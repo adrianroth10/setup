@@ -4,8 +4,10 @@ blender
 bluez
 clamtk
 cmake
+imagemagick
 keepassx
 make
+parallel
 silversearcher-ag
 stellarium
 unrar

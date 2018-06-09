@@ -1,41 +1,44 @@
 #!/bin/bash
-# Both python 2 and 3 with basic packages
+# Python 3 with basic packages
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
 $PACKAGE_INSTALL \
-	python2.7 \
+	dvipng \
 	python3.5 \
-	python-pip \
 	python3-pip \
-	python-dev \
+	python3-venv \
+	python3-tk \
 	ipython \
-	ipython-notebook \
+	cython3 \
+	python3-launchpadlib \
+	python3-testresources \
 
 add_lines ~/.pythonrc.py "import numpy as np
 import matplotlib.pyplot as plt"
 add_lines ~/.bashrc "# python
-export PYTHONSTARTUP=~/.pythonrc.py"
+alias python=python3
+export PYTHONSTARTUP=~/.pythonrc.py
+"
 
 PACKAGES=( matplotlib \
 	numpy \
 	scipy \
+	jupyter \
+	notedown \
 	scikit-image \
-	matplotlib \
-	numpy \
-	scipy \
+	imageio \
 	imutils \
 	pyyaml \
 	uncertainties \
-	jupyter \
-	notedown \
 	bqplot \
 	ipywidgets \
+	flake8 \
+	pylint \
 	)
 
 #-U means upgrade all packages to the newest available version
-sudo -H pip install --upgrade pip
-sudo -H pip install -U ${PACKAGES[@]}
+sudo -H pip3 install --upgrade pip
 sudo -H pip3 install -U ${PACKAGES[@]}
 
 sudo -H jupyter nbextension enable --py --sys-prefix bqplot
