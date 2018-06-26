@@ -51,13 +51,13 @@ if [ "$F" == "f" ] || [ "$F" == "ff" ] ; then
 		libxml2-dev \
 		libkrb5-dev \
 		libgsl0-dev \
-		libroot-graf2d-postscript-dev \
-		libroot-graf2d-postscript5.34 \
-		libroot-graf3d-g3d5.34 \
-		libroot-graf3d-g3d-dev \
-		libroot-graf3d-eve5.34 \
-		libroot-graf3d-eve-dev \
-		libroot-math-physics-dev
+		#libroot-graf2d-postscript-dev \
+		#libroot-graf2d-postscript5.34 \
+		#libroot-graf3d-g3d5.34 \
+		#libroot-graf3d-g3d-dev \
+		#libroot-graf3d-eve5.34 \
+		#libroot-graf3d-eve-dev \
+		#libroot-math-physics-dev
 		#gfortran \
 		#libfftw3-dev \ 
 		#libcfitsio-dev \
@@ -88,14 +88,15 @@ if [ "$F" == "f" ] || [ "$F" == "ff" ] ; then
 
 	#Follow README for build at fixed location
 	mkdir -p root-build
-	mkdir -p root-install
+	#mkdir -p root-install
 	cd root-build
-	sudo cmake ../ -Dgnuinstall=ON -Dpython2=ON -DCMAKE_INSTALL_PREFIX=~/.root_cern/root-install 
+	#sudo cmake ../ -Dgnuinstall=ON -Dpython2=ON -DCMAKE_INSTALL_PREFIX=~/.root_cern/root-install 
+	sudo cmake ../ -Dgnuinstall=ON -Dpython2=ON -DCMAKE_INSTALL_PREFIX=/usr/local 
 	sudo make -j2
 	sudo make install
 	sudo ldconfig -v
 
 	#If not existing, adding line to file
-	grep -q -F 'source ~/.root_cern/root-install/bin/thisroot.sh' ~/.bashrc || echo "source ~/.root_cern/root-install/bin/thisroot.sh" >> ~/.bashrc
+	#grep -q -F 'source ~/.root_cern/root-install/bin/thisroot.sh' ~/.bashrc || echo "source ~/.root_cern/root-install/bin/thisroot.sh" >> ~/.bashrc
 
 fi
