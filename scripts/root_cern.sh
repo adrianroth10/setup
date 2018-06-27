@@ -74,7 +74,6 @@ if [ "$F" == "f" ] || [ "$F" == "ff" ] ; then
 		#git reset --hard origin/$VERSION #this was fatal for some reason
 		#git pull https://github.com/Geant4/geant4.git ~/.geant4 $VERSION
 		sudo rm -rf root-build
-		sudo rm -rf root-install
 		git reset --hard HEAD
 		#Following line should enable no need to specify the branch to pull
 		#git branch --set-upstream=origin/$VERSION $VERSION
@@ -88,15 +87,13 @@ if [ "$F" == "f" ] || [ "$F" == "ff" ] ; then
 
 	#Follow README for build at fixed location
 	mkdir -p root-build
-	#mkdir -p root-install
 	cd root-build
-	#sudo cmake ../ -Dgnuinstall=ON -Dpython2=ON -DCMAKE_INSTALL_PREFIX=~/.root_cern/root-install 
-	sudo cmake ../ -Dgnuinstall=ON -Dpython2=ON -DCMAKE_INSTALL_PREFIX=/usr/local 
+	sudo cmake ../ -Dgnuinstall=ON -Dpython2=ON -Dqtgsi=ON -DCMAKE_INSTALL_PREFIX=/usr/local 
 	sudo make -j2
 	sudo make install
 	sudo ldconfig -v
 
 	#If not existing, adding line to file
-	#grep -q -F 'source ~/.root_cern/root-install/bin/thisroot.sh' ~/.bashrc || echo "source ~/.root_cern/root-install/bin/thisroot.sh" >> ~/.bashrc
+	grep -q -F 'source /usr/local/bin/thisroot.sh' ~/.bashrc || echo "source /usr/local/bin/thisroot.sh" >> ~/.bashrc
 
 fi
