@@ -17,5 +17,7 @@ vim +PluginInstall +qall >/dev/null
 ##for arch linux the above line needs to be:
 #python3 install.py --system-libclang --all
 
+#python install.py --clang-completer
+
 #How to get the python enabled? I suspect this is what keeps us from using autocompletion with \ref and \cite in vim-latex.
 
