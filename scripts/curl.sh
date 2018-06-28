@@ -4,5 +4,6 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 $PACKAGE_INSTALL \
 	curl \
-	libcurl3 \
+	curlftpfs \
+	libcurl4 \
 	libcurl4-gnutls-dev
