@@ -43,6 +43,8 @@ Plugin 'goerz/ipynb_notedown.vim'
 " autocompletion for c/c++ etc.
 Plugin 'valloric/youcompleteme'
 
+Plugin 'DoxygenToolkit.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -51,8 +53,16 @@ filetype plugin indent on    " required
 let g:tex_flavor='latex' 
 
 let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_MultipleCompileFormats = 'pdf, bibtex, aux, pdf' 
+"let g:Tex_CompileRule_pdf='xelatex --interaction=nonstopmode $*'
+"let g:Tex_MultipleCompileFormats = 'pdf, bibtex, aux, pdf' 
+let g:Tex_MultipleCompileFormats = 'pdf, bibtex, pdf, pdf' 
 "let g:Tex_FoldedEnvironments = ''
+
+"https://tex.stackexchange.com/questions/150770/how-to-make-vim-short-key-for-xelatex-and-pdflatex-both
+function SetXeTex()
+    let g:Tex_CompileRule_pdf = 'xelatex -interaction=nonstopmode $*'
+endfunction
+map <Leader>lx :<C-U>call SetXeTex()<CR>
 
 nmap <silent> <C-i> :BufSurfBack<CR>
 nmap <silent> <C-o> :BufSurfForward<CR>
@@ -89,7 +99,7 @@ set confirm
 set visualbell
 set notimeout ttimeout ttimeoutlen=200
 
-nmap <Leader>ss :setlocal spell! spelllang=en_us<CR>
+nmap <Leader>ss :setlocal spell! spelllang=en_gb<CR>
 
 "Set indentation conventions for filetypes
 autocmd FileType c setlocal shiftwidth=8 tabstop=8
@@ -99,3 +109,5 @@ autocmd FileType r,ruby,eruby,plaintex,tex,matlab,yaml setlocal shiftwidth=2 sof
 
 "Removes trailing whitespaces
 autocmd FileType c,cpp,java,php,r,ruby,eruby,plaintex,tex,matlab,yaml,make autocmd BufWritePre <buffer> :%s/\s\+$//e
+
+let g:DoxygenToolkit_authorName="Lund Nuclear Structure Group - modified by Anton Såmark-Roth"

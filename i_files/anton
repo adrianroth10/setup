@@ -11,7 +11,7 @@ silversearcher-ag
 stellarium
 unrar
 valgrind
-libyaml-cpp-dev
+#libyaml-cpp-dev
 
 bashrc.sh
 vim.sh
