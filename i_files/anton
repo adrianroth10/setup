@@ -11,9 +11,12 @@ silversearcher-ag
 stellarium
 unrar
 valgrind
+openssh-server 
+openssh-client
 #libyaml-cpp-dev
 
 bashrc.sh
+#zsh.sh
 vim.sh
 anaconda.sh
 keepassx2.sh
@@ -31,4 +34,5 @@ mendeley.sh
 skype.sh
 #opencv.sh
 #root_cern.sh
+#go4_gsi.sh
 #geant4.sh
