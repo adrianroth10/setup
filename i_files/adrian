@@ -19,17 +19,13 @@ curl.sh
 haskell.sh
 R.sh
 mutt.sh
-julia.sh
 sdl.sh
 pandoc.sh
 apache.sh
 python.sh
-ruby.sh
 opencv.sh
 mysql.sh
 inkscape.sh
 yaml_cpp.sh
-bear.sh
-cuda.sh
 latex.sh
 java.sh

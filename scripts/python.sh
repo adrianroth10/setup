@@ -21,7 +21,8 @@ alias python=python3
 export PYTHONSTARTUP=~/.pythonrc.py
 "
 
-PACKAGES=( matplotlib \
+PACKAGES=( \
+	matplotlib \
 	numpy \
 	scipy \
 	jupyter \
@@ -29,7 +30,6 @@ PACKAGES=( matplotlib \
 	scikit-image \
 	imageio \
 	imutils \
-	pyyaml \
 	uncertainties \
 	bqplot \
 	ipywidgets \

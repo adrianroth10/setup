@@ -7,9 +7,10 @@ if [ "$F" == "f" ] || ! command -v stack ; then
 	curl -sSL https://get.haskellstack.org/ | sh -s - -f
 fi
 $PACKAGE_INSTALL haskell-platform hlint
-add_lines ~/.bashrc "# cabal\nexport PATH=\"~/.cabal/bin:\$PATH\"\n\n"
+add_lines ~/.bashrc "# cabal
+export PATH=\"~/.cabal/bin:\$PATH\"\n"
 cabal update 
-cabal install lhs2tex
+# cabal install lhs2tex
 
 if [ "$F" == "f" ] || ! command -v hastec ; then
 	WWW=https://www.haste-lang.org/downloads/ghc-7.10/haste-compiler-0.5.5.1_ghc-7.10.3-linux.tar.bz2
