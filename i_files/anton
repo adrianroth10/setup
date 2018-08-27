@@ -13,6 +13,7 @@ unrar
 valgrind
 openssh-server 
 openssh-client
+latex2rtf
 #libyaml-cpp-dev
 
 bashrc.sh
