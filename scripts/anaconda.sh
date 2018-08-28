@@ -17,6 +17,8 @@ $PACKAGE_INSTALL nodejs
 conda install -y -c conda-forge -c damianavila82 \
 	jupyterlab \
 	numpy \
+	scipy \
+	matplotlib \
 	sympy \
 	ipyvolume \
 	ipywidgets \
@@ -24,6 +26,7 @@ conda install -y -c conda-forge -c damianavila82 \
 	bokeh \
 	altair \
 	uncertainties \
+	sphinx \
 	rise
 # nbgrader \  # excluded until successful usage demonstrated
 
