@@ -11,6 +11,7 @@ alias ...=\"cd ../..\"
 alias go=\"xdg-open\"
 alias gccw=\"/opt/mingw32/bin/i686-w64-mingw32-gcc\"
 alias sprint=\"vim ~/scrum/sprintbacklog*\"
+alias idag=\"vim ~/scrum/idag\"
 alias xd=\"xinput disable 13\"
 alias bt=\"bluetoothctl\"
 
