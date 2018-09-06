@@ -124,5 +124,5 @@ if [ "$F" == "f" ] || ! command -v opencv_version ; then
 	sudo make install
 	sudo ldconfig
 
-	rm -rf opencv-3.4.0.zip opencv_contrib-3.4.0.zip
+	rm ~/opencv-3.4.0.zip ~/opencv_contrib-3.4.0.zip
 fi

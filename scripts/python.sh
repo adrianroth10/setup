@@ -4,6 +4,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
 $PACKAGE_INSTALL \
+	dvipng \
 	python3.5 \
 	python3-pip \
 	python3-venv \
@@ -20,7 +21,8 @@ alias python=python3
 export PYTHONSTARTUP=~/.pythonrc.py
 "
 
-PACKAGES=( matplotlib \
+PACKAGES=( \
+	matplotlib \
 	numpy \
 	scipy \
 	jupyter \
@@ -28,7 +30,6 @@ PACKAGES=( matplotlib \
 	scikit-image \
 	imageio \
 	imutils \
-	pyyaml \
 	uncertainties \
 	bqplot \
 	ipywidgets \

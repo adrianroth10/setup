@@ -13,3 +13,5 @@ $PACKAGE_INSTALL \
 	texlive-xetex \
 	texlive-extra-utils \
 	tex4ht \
+	texlive-lang-greek \
+	texlive-lang-german \

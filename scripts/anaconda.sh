@@ -2,20 +2,23 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
-#wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
-#bash Anaconda3-5.0.1-Linux-x86_64.sh
-#rm Anaconda3-5.0.1-Linux-x86_64.sh
+#wget https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
+#bash Anaconda3-5.2.0-Linux-x86_64.sh
+#rm Anaconda3-5.2.0-Linux-x86_64.sh
 
 #This makes it possible to install more packages to the standard anaconda 
 sudo chown -R $USER ~/anaconda3
 
 source ~/.bashrc
+#source ~/.zshrc
 
 $PACKAGE_INSTALL nodejs
 
 conda install -y -c conda-forge -c damianavila82 \
 	jupyterlab \
 	numpy \
+	scipy \
+	matplotlib \
 	sympy \
 	ipyvolume \
 	ipywidgets \
@@ -23,6 +26,7 @@ conda install -y -c conda-forge -c damianavila82 \
 	bokeh \
 	altair \
 	uncertainties \
+	sphinx \
 	rise
 # nbgrader \  # excluded until successful usage demonstrated
 

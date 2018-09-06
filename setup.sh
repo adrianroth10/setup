@@ -70,9 +70,9 @@ for ((i=0;i<L;i++))
 do
 	FILE=$(basename ${SCRIPTS[$i]} .sh)
 	sudo -v
+	DATE=`date +%s`
 	VERBOSE=$(cat ${SCRIPTS[$i]} | sed -n 2p)
 	if [ ! "$VERBOSE" == "# Verbose" ]; then
-		DATE=`date +%s`
 		stopwatch $DATE "[$i/$L] Installing $FILE" &
 		PID=$!
 		disown
