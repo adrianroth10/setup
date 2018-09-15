@@ -43,3 +43,14 @@ sudo -H pip3 install -U ${PACKAGES[@]}
 
 sudo -H jupyter nbextension enable --py --sys-prefix bqplot
 sudo -H jupyter nbextension enable --py widgetsnbextension --sys-prefix
+
+# Installing graph tool
+# Will be added multiple times if run again
+sudo_add_lines /etc/apt/sources.list "deb http://downloads.skewed.de/apt/bionic bionic universe
+deb-src http://downloads.skewed.de/apt/bionic bionic universe
+"
+
+sudo apt-key adv --keyserver pgp.skewed.de --recv-key 612DEFB798507F25
+
+$PACKAGE_UPDATE
+$PACKAGE_INSTALL python3-graph-tool
