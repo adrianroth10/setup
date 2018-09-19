@@ -46,4 +46,6 @@ if [ "$F" == "f" ] || [ "$F" == "ff" ] ; then
 	#/home/anton/go4-5.3.0/Go4StatusAnalysis/TGo4HistogramStatus.h:17:10: fatal error: 'TGo4ObjectStatus.h' file not found
 	cp Go4StatusBase/TGo4ObjectStatus.h Go4StatusAnalysis/
 
+	sudo touch /usr/local/share/go4/build/dummy.d
+
 fi

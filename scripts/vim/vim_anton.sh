@@ -21,3 +21,4 @@ vim +PluginInstall +qall >/dev/null
 
 #How to get the python enabled? I suspect this is what keeps us from using autocompletion with \ref and \cite in vim-latex.
 
+#://stackoverflow.com/questions/4237817/help-with-configuring-vim-for-c
