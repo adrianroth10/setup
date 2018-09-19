@@ -16,6 +16,7 @@ $PACKAGE_INSTALL nodejs
 
 conda install -y -c conda-forge -c damianavila82 \
 	jupyterlab \
+	nbstripout \
 	numpy \
 	scipy \
 	matplotlib \
