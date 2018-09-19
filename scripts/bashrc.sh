@@ -10,6 +10,7 @@ alias ..=\"cd ..\"
 alias ...=\"cd ../..\"
 alias go=\"xdg-open\"
 alias sprint=\"vim ~/scrum/sprintbacklog*\"
+alias idag=\"vim ~/scrum/idag\"
 alias bt=\"bluetoothctl\"
 
 # Git aliases

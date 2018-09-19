@@ -109,3 +109,15 @@ function add_lines {
 	printf "\n$2" >> $1
 }
 
+function sudo_add_lines {
+	if [ ! -e $1 ]; then
+		printf "" > $1
+	fi
+	FIRSTLINE=${2%%$'\n'*}
+	while read LINE; do
+		if [ "$FIRSTLINE" == "$LINE" ]; then
+			return
+		fi
+	done < $1
+	printf "\n$2" | sudo tee -a $1
+}
