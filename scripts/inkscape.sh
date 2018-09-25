@@ -2,19 +2,16 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
-#Following: http://ubuntuhandbook.org/index.php/2017/01/install-inkscape-0-92-ppa-ubuntu-16-04-16-10-14-04/
-
-sudo add-apt-repository -y ppa:inkscape.dev/stable
+#https://github.com/textext/textext/wiki/Installation-specific-instructions-for-Linux-systems
+#NOTE: it needs python2, and therefore use_conda is implemented.
 
 $PACKAGE_UPDATE 
-$PACKAGE_INSTALL inkscape pstoedit
+$PACKAGE_INSTALL inkscape pstoedit imagemagick pdf2svg python-gtk2 python-gtksourceview2 gnome-themes-standard
 
-#Extension for latex texting: "textext"
-wget https://pav.iki.fi/_downloads/textext-0.4.4.tar.gz
-tar -xvf textext-0.4.4.tar.gz 
-mkdir -p ~/.config/inkscape/extensions/
-mv -f LICENSE.txt ~/.config/inkscape/extensions/
-mv -f textext.inx ~/.config/inkscape/extensions/
-mv -f textext.py ~/.config/inkscape/extensions/
+sudo chown -R $USER ~/.config/inkscape
 
-rm textext-0.4.4.tar.gz
+wget https://github.com/textext/textext/releases/download/0.8.1/TexText-Linux-0.8.1.tgz
+mkdir -p ~/.textext-0.8.1-linux && tar -xvf TexText-Linux-0.8.1.tgz -C ~/.textext-0.8.1-linux --strip-components=1
+cd ~/.textext-0.8.1-linux
+sudo python setup.py
+rm TexText-Linux-0.8.1.tgz 

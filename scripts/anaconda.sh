@@ -2,28 +2,38 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
+#wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+#bash Miniconda3-latest-Linux-x86_64.sh
+#rm Miniconda3-latest-Linux-x86_64.sh
 #wget https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
 #bash Anaconda3-5.2.0-Linux-x86_64.sh
 #rm Anaconda3-5.2.0-Linux-x86_64.sh
 
 #This makes it possible to install more packages to the standard anaconda 
-sudo chown -R $USER ~/anaconda3
+#sudo chown -R $USER ~/anaconda3
+sudo chown -R $USER ~/miniconda3
 
 source ~/.bashrc
 #source ~/.zshrc
 
-$PACKAGE_INSTALL nodejs
-
 conda install -y -c conda-forge -c damianavila82 \
+	nodejs \
+	ipykernel \
+	ipympl \
+	jupyter \
 	jupyterlab \
 	numpy \
 	scipy \
+	cython \
+	pandas \
 	matplotlib \
 	sympy \
 	ipyvolume \
 	ipywidgets \
 	seaborn \
 	bokeh \
+	nbconvert \
+	nbstripout \
 	altair \
 	uncertainties \
 	sphinx \
@@ -40,7 +50,8 @@ conda install -y -c conda-forge -c pyne pyne=0.5.11
 # pip packages
 pip --no-cache-dir install \
 	git+https://github.com/data-8/nbgitpuller \
-	plotly
+	plotly \
+	pyyaml
 
 # more pip packages
 pip --no-cache-dir install \
