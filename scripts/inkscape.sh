@@ -15,3 +15,6 @@ mkdir -p ~/.textext-0.8.1-linux && tar -xvf TexText-Linux-0.8.1.tgz -C ~/.textex
 cd ~/.textext-0.8.1-linux
 sudo python setup.py
 rm TexText-Linux-0.8.1.tgz 
+
+#Install https://github.com/jbohren/beamerscape, but need pull request and this file exists in current dir.
+sudo cp .export_overlays.py /usr/bin/export_overlays
