@@ -15,3 +15,5 @@ $PACKAGE_INSTALL \
 	tex4ht \
 	texlive-lang-greek \
 	texlive-lang-german \
+
+# Where to put 'personal' packages: /usr/share/texmf/tex/latex
