@@ -18,3 +18,6 @@ rm TexText-Linux-0.8.1.tgz
 
 #Install https://github.com/jbohren/beamerscape, but need pull request and this file exists in current dir.
 sudo cp .export_overlays.py /usr/bin/export_overlays
+
+# Include template for 16:9 beamer in inkscape
+cp .latex_beamer_template.svg ~/.config/inkscape/templates/Latex\ Beamer\ 16:9.svg
