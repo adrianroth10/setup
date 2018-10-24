@@ -21,3 +21,6 @@ sudo cp .export_overlays.py /usr/bin/export_overlays
 
 # Include template for 16:9 beamer in inkscape
 cp .latex_beamer_template.svg ~/.config/inkscape/templates/Latex\ Beamer\ 16:9.svg
+
+# A little random to have here, but here goes okular config for annotations
+cp .okularpartrc ~/.config/okularpartrc
