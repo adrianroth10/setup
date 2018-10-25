@@ -1,6 +1,6 @@
 #!/bin/bash
 # Installation of the cuda drivers
-# Will probably only work on an 64bit ubuntu 16.04 system with certain GPU:s
+# NOT WORKING
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 

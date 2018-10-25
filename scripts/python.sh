@@ -51,6 +51,5 @@ deb-src http://downloads.skewed.de/apt/bionic bionic universe
 "
 
 sudo apt-key adv --keyserver pgp.skewed.de --recv-key 612DEFB798507F25
-
 $PACKAGE_UPDATE
 $PACKAGE_INSTALL python3-graph-tool

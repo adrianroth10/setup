@@ -1,5 +1,4 @@
 git
-okular
 arduino
 arduino-mk
 blender
@@ -33,6 +32,7 @@ android-file-transfer.sh
 google_chrome.sh
 mendeley.sh
 skype.sh
+okular.sh
 #opencv.sh
 #root_cern.sh
 #go4_gsi.sh
