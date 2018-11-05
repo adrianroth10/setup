@@ -16,32 +16,10 @@ sudo chown -R $USER ~/miniconda3
 source ~/.bashrc
 #source ~/.zshrc
 
-conda install -y -c conda-forge -c damianavila82 \
-	nodejs \
-	ipykernel \
-	ipympl \
-	jupyter \
-	jupyterlab \
-	nbstripout \
-	numpy \
-	scipy \
-	cython \
-	pandas \
-	matplotlib \
-	sympy \
-	ipyvolume \
-	ipywidgets \
-	seaborn \
-	bokeh \
-	nbconvert \
-	nbstripout \
-	altair \
-	uncertainties \
-	sphinx \
-	rise
-# nbgrader \  # excluded until successful usage demonstrated
+#installing all packages into the base environment from the yaml file. Thus, this is the one to update if needed.
+conda env update -f environment.yml
 
-conda install -y -c conda-forge -c pyne pyne=0.5.11
+# nbgrader \  # excluded until successful usage demonstrated
 
 # enable python2 in jupyter
 #conda create -n ipykernel_py2 python=2 ipykernel
