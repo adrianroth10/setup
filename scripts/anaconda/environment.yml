@@ -10,6 +10,7 @@ dependencies:
   - ipympl
   - jupyter
   - jupyterlab
+  - jupyter_contrib_nbextensions
   - matplotlib
   - cython
   - numpy

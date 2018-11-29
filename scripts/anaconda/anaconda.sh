@@ -35,6 +35,7 @@ pip --no-cache-dir install \
 # more pip packages
 pip --no-cache-dir install \
 	jupyter_contrib_nbextensions \
+	jupyter_nbextensions_configurator \
 	jupyterlab_iframe \
 	jupyterlab_latex \
 	jupyterlab_github \
@@ -73,6 +74,7 @@ jupyter nbextension enable --sys-prefix rubberband/main
 jupyter nbextension enable --sys-prefix toc2/main
 jupyter nbextension enable --sys-prefix export_embedded/main
 jupyter nbextension enable --sys-prefix hide_header/main
+jupyter nbextensions_configurator enable --user
 
 
 # adding vim key binding for the notebook
