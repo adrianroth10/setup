@@ -2,35 +2,24 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
+#wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+#bash Miniconda3-latest-Linux-x86_64.sh
+#rm Miniconda3-latest-Linux-x86_64.sh
 #wget https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
 #bash Anaconda3-5.2.0-Linux-x86_64.sh
 #rm Anaconda3-5.2.0-Linux-x86_64.sh
 
 #This makes it possible to install more packages to the standard anaconda 
-sudo chown -R $USER ~/anaconda3
+#sudo chown -R $USER ~/anaconda3
+sudo chown -R $USER ~/miniconda3
 
 source ~/.bashrc
 #source ~/.zshrc
 
-$PACKAGE_INSTALL nodejs
+#installing all packages into the base environment from the yaml file. Thus, this is the one to update if needed.
+conda env update -f environment.yml
 
-conda install -y -c conda-forge -c damianavila82 \
-	jupyterlab \
-	numpy \
-	scipy \
-	matplotlib \
-	sympy \
-	ipyvolume \
-	ipywidgets \
-	seaborn \
-	bokeh \
-	altair \
-	uncertainties \
-	sphinx \
-	rise
 # nbgrader \  # excluded until successful usage demonstrated
-
-conda install -y -c conda-forge -c pyne pyne=0.5.11
 
 # enable python2 in jupyter
 #conda create -n ipykernel_py2 python=2 ipykernel
@@ -40,11 +29,13 @@ conda install -y -c conda-forge -c pyne pyne=0.5.11
 # pip packages
 pip --no-cache-dir install \
 	git+https://github.com/data-8/nbgitpuller \
-	plotly
+	plotly \
+	pyyaml
 
 # more pip packages
 pip --no-cache-dir install \
 	jupyter_contrib_nbextensions \
+	jupyter_nbextensions_configurator \
 	jupyterlab_iframe \
 	jupyterlab_latex \
 	jupyterlab_github \
@@ -83,6 +74,7 @@ jupyter nbextension enable --sys-prefix rubberband/main
 jupyter nbextension enable --sys-prefix toc2/main
 jupyter nbextension enable --sys-prefix export_embedded/main
 jupyter nbextension enable --sys-prefix hide_header/main
+jupyter nbextensions_configurator enable --user
 
 
 # adding vim key binding for the notebook

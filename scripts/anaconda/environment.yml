@@ -1,0 +1,33 @@
+name: base
+channels:
+  - conda-forge
+  - defaults
+  - damianavila82
+dependencies:
+  - nodejs
+  - python=3.6.5
+  - ipykernel
+  - ipympl
+  - jupyter
+  - jupyterlab
+  - jupyter_contrib_nbextensions
+  - matplotlib
+  - cython
+  - numpy
+  - scipy
+  - pandas
+  - sympy
+  - nbconvert
+  - nbstripout
+  - ipyvolume
+  - ipywidgets
+  - seaborn
+  - bokeh
+  - altair
+  - uncertainties
+  - sphinx
+  - rise
+  - pyne=0.5.11=py36_blas_openblas_0
+  - pip
+  - pip:
+    - pyyaml

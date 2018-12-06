@@ -1,0 +1,14 @@
+[$Version]
+update_info=okular.upd:sep_settings
+
+[General]
+UseKTTSD=false
+
+[Identity]
+IdentityAuthor=Anton Såmark-Roth
+
+[Main View]
+SplitterSizes=90,2374
+
+[Reviews]
+AnnotationTools=<tool name="Summary comment" id="1" type="note-linked"><engine color="#ffff00" hoverIcon="tool-note" type="PickPoint"><annotation icon="Note" color="#ffff00" type="Text"/></engine><shortcut>1</shortcut></tool>,<tool name="Grammatic/language error" id="2" type="underline"><engine color="#4dffff" type="TextSelector"><annotation color="#4dffff" type="Underline"/></engine><shortcut>2</shortcut></tool>,<tool name="Important error" id="3" type="highlight"><engine color="#ef2929" type="TextSelector"><annotation color="#ef2929" opacity="0.9" type="Highlight"/></engine><shortcut>3</shortcut></tool>,<tool name="Comment" id="4" type="highlight"><engine color="#ffff00" type="TextSelector"><annotation color="#ffff00" type="Highlight"/></engine><shortcut>4</shortcut></tool>,<tool name="Style/convention" id="5" type="squiggly"><engine color="#ff60fb" type="TextSelector"><annotation color="#ff60fb" type="Squiggly"/></engine><shortcut>5</shortcut></tool>,<tool name="Good!" id="6" type="underline"><engine color="#8ae234" type="TextSelector"><annotation color="#8ae234" type="Underline"/></engine><shortcut>6</shortcut></tool>,<tool name="Figure/table comment" id="7" type="note-linked"><engine color="#f57900" hoverIcon="tool-note" type="PickPoint"><annotation icon="Note" color="#f57900" type="Text"/></engine><shortcut>7</shortcut></tool>,<tool name="Remove" id="8" type="strikeout"><engine color="#ef2929" type="TextSelector"><annotation color="#ef2929" type="StrikeOut"/></engine><shortcut>8</shortcut></tool>,<tool id="9" type="ellipse"><engine block="true" color="#00ffff" type="PickPoint"><annotation color="#00ffff" width="5" type="GeomCircle"/></engine><shortcut>9</shortcut></tool>

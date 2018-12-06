@@ -1,7 +1,7 @@
 #!/bin/bash
 # Includes ruby function for inlining css in html
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-. $DIR/../extras/functions.sh
+. $DIR/../../extras/functions.sh
 
 if [ "$F" == "f" ] || ! command -v rbenv ; then
 	$PACKAGE_INSTALL libssl-dev libreadline-dev
