@@ -12,7 +12,7 @@ unrar
 valgrind
 openssh-server 
 openssh-client
-wine
+wine-stable
 latex2rtf
 #libyaml-cpp-dev
 
