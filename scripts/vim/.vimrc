@@ -27,7 +27,8 @@ nmap <enter> o<esc>
 nmap <s-space> a<space><esc>
 nmap <s-enter> O<esc
 
-"let's the syntastic check for c++11 methods
+"syntastic options
+let g:syntastic_c_config_file = '.syntastic_c_config'
 let g:syntastic_cpp_compiler_options = '-std=c++11'
 let g:syntastic_python_checkers = ['pyflakes']
 
