@@ -20,6 +20,8 @@ git_clone_or_pull https://github.com/LukeSmithxyz/mutt-wizard.git ~/.config/mutt
 read -p "What did you call your account?" ACCOUNT
 offlineimap -a $ACCOUNT
 
+# If you have protonmail check out https://github.com/LukeSmithxyz/mutt-wizard/issues/95 for final fixes
+
 
 # if [ "$F" == "f" ] || ! command -v mutt ; then
 # 	mkdir -p ~/.mutt/cache/headers
