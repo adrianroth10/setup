@@ -3,6 +3,7 @@ channels:
   - conda-forge
   - defaults
   - damianavila82
+  - costrouc
 dependencies:
   - nodejs
   - python=3.6.5
@@ -31,3 +32,4 @@ dependencies:
   - pip
   - pip:
     - pyyaml
+  - pysrim
