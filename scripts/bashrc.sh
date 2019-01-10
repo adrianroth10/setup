@@ -12,6 +12,7 @@ alias go=\"xdg-open\"
 alias sprint=\"vim ~/scrum/sprintbacklog*\"
 alias idag=\"vim ~/scrum/idag\"
 alias bt=\"bluetoothctl\"
+alias accio=\"ag\"
 
 # Git aliases
 alias gs=\"git status\"
