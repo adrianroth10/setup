@@ -23,8 +23,8 @@ offlineimap -a $ACCOUNT
 add_lines ~/.bashrc "# Neomutt
 export EDITOR=vim
 "
-add_lines ~/.config/mutt/muttrc "macro index,pager d \"<save-message>=Archive<enter><enter>\" \"Archive\"
-"
+# add_lines ~/.config/mutt/muttrc "macro index,pager d \"<save-message>=Archive<enter><enter>\" \"Archive\"
+# "
 
 # If you have protonmail with bridge check out https://github.com/LukeSmithxyz/mutt-wizard/issues/95 for final fixes
 # Change passwordeval in ~/.offlineimaprc and ~/.msmtprc to password and bridge password
