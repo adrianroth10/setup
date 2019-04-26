@@ -63,6 +63,7 @@ jupyter serverextension enable --sys-prefix jupyterlab_discovery
 jupyter labextension install @jupyterlab/plotly-extension
 jupyter labextension install jupyterlab-toc
 jupyter labextension install jupyterlab_bokeh
+jupyter labextension install jupyter-matplotlib
 
 
 # classical notebook extensions
