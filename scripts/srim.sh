@@ -17,8 +17,6 @@ curl --output $SRIMDIR/SRIM_INSTALL.exe http://www.srim.org/SRIM/SRIM-2013-Std.e
 #curl --output $SRIMDIR/SRIM_INSTALL.exe http://www.srim.org/SRIM/SRIM-2008-Std.e
 wine $SRIMDIR/SRIM_INSTALL.exe
 
-#VERSION="geant4-10.5-release"
-
 if [ "$F" == "ff" ]; then
 	rm -rf ~/.pysrim 
 fi
@@ -45,4 +43,7 @@ if [ "$F" == "f" ] || [ "$F" == "ff" ]; then
 		#git checkout $VERSION
 	fi
 
+	#sudo docker run -v $PWD/examples/docker:/opt/pysrim/ \
+	#           -v /tmp/output:/tmp/output \
+	#	              -it costrouc/pysrim sh -c "xvfb-run -a python3.6 /opt/pysrim/ni.py"
 fi

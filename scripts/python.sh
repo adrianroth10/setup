@@ -14,6 +14,11 @@ $PACKAGE_INSTALL \
 	python3-launchpadlib \
 	python3-testresources \
 
+# Weird thing with ubuntu 18 and pip2
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+sudo -H python2.7 get-pip.py
+rm get-pip.py
+
 add_lines ~/.pythonrc.py "import numpy as np
 import matplotlib.pyplot as plt"
 add_lines ~/.bashrc "# python
@@ -38,7 +43,6 @@ PACKAGES=( \
 	)
 
 #-U means upgrade all packages to the newest available version
-sudo -H pip3 install --upgrade pip
 sudo -H pip3 install -U ${PACKAGES[@]}
 
 sudo -H jupyter nbextension enable --py --sys-prefix bqplot
