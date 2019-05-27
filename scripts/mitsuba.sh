@@ -7,7 +7,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Tips for the installation on Ubuntu 16.04 LTS
 # https://cgcvtutorials.wordpress.com/2017/05/31/install-mitsuba-on-linux-16-04/
 
-$PACKAGE_INSTALL scons qt4-dev-tools libboost-all-dev libglewmx-dev libxerces-c-dev libpcrecpp0 
+$PACKAGE_INSTALL build-essential scons qt4-dev-tools libpng-dev libjpeg-dev libilmbase-dev libxerces-c-dev libboost-all-dev libopenexr-dev libglewmx-dev libxxf86vm-dev libeigen3-dev libfftw3-dev # libpcrecpp0 
 # might have to download and install the last package from https://packages.ubuntu.com/trusty-updates/libpcrecpp0
 
 wget https://www.mitsuba-renderer.org/repos/mitsuba/archive/tip.zip

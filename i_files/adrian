@@ -7,6 +7,7 @@ cmake
 imagemagick
 keepassx
 make
+owncloud-client
 parallel
 silversearcher-ag
 stellarium
