@@ -31,5 +31,6 @@ alias root_valgrind=\"valgrind --tool=memcheck --suppressions=$ROOTSYS/etc/valgr
 
 alias fetch_pwds=\"scp anton@xi.nuclear.lu.se:/home/anton/Documents/småttogott/importantos.kdbx ~/Documents/Övrigt/Computer\"
 alias send_pwds=\"scp ~/Documents/Övrigt/Computer/importantos.kdbx anton@xi.nuclear.lu.se:/home/anton/Documents/småttogott/importantos.kdbx\"
+bind 'set completion-ignore-case on'
 
 "

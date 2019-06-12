@@ -2,12 +2,13 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
-#From: https://gitlab.com/costrouc/pysrim
-
-## A script for installing SRIM on Linux machine
-
 ## wine needs to already be installed
 # sudo apt install wine-stable
+
+# Recipe
+# Try the 2008 version, first. Extract the files into the c directory in .wine in program_files and in a directory SRIM-2008. From this directory now execute the setup.exe file and install SRIM to the same path. 
+# THIS actually worked, once!
+# Following this I followed the lines below to install SRIM-2013 in the ~/.srim directory, and it also worked.
 
 SRIMDIR=~/.srim
 
@@ -16,17 +17,12 @@ curl --output $SRIMDIR/SRIM_INSTALL.exe http://www.srim.org/SRIM/SRIM-2013-Std.e
 #curl --output $SRIMDIR/SRIM_INSTALL.exe http://www.srim.org/SRIM/SRIM-2008-Std.e
 wine $SRIMDIR/SRIM_INSTALL.exe
 
-# Recipe
-# Try the 2008 version, first. Extract the files into the c directory in .wine in program_files and in a directory SRIM-2008. From this directory now execute the setup.exe file and install SRIM to the same path. 
-# THIS actually worked, once!
-# Following this I followed the lines above to install SRIM-2013 in the ~/.srim directory, and it also worked.
-
-VERSION="geant4-10.5-release"
-
 if [ "$F" == "ff" ]; then
 	rm -rf ~/.pysrim 
 fi
 
+# the following clones the pysrim code, it has been necessary due to conda version not functioning.
+# With conda activated, i.e. `use_conda`, the setup script is run as `python setup.py install`
 if [ "$F" == "f" ] || [ "$F" == "ff" ]; then
 	if [ -d ~/.pysrim ]; then
 		cd ~/.pysrim
