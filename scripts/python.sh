@@ -9,6 +9,8 @@ $PACKAGE_INSTALL \
 	python3-pip \
 	python3-venv \
 	python3-tk \
+	python3-pil \
+	python3-pil.imagetk \
 	ipython \
 	cython3 \
 	python3-launchpadlib \
