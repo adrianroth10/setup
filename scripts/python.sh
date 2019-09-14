@@ -5,7 +5,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 $PACKAGE_INSTALL \
 	dvipng \
-	python3.5 \
+	python3 \
 	python3-pip \
 	python3-venv \
 	python3-tk \
@@ -32,8 +32,6 @@ PACKAGES=( \
 	matplotlib \
 	numpy \
 	scipy \
-	jupyter \
-	notedown \
 	scikit-image \
 	imageio \
 	imutils \
