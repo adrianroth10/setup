@@ -40,6 +40,7 @@ PACKAGES=( \
 	ipywidgets \
 	flake8 \
 	pylint \
+	tqdm \
 	)
 
 #-U means upgrade all packages to the newest available version
