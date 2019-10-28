@@ -5,7 +5,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 $PACKAGE_INSTALL \
 	dvipng \
-	python3.5 \
+	python3 \
 	python3-pip \
 	python3-venv \
 	python3-tk \
@@ -15,6 +15,7 @@ $PACKAGE_INSTALL \
 	cython3 \
 	python3-launchpadlib \
 	python3-testresources \
+	python3-tqdm \
 
 # Weird thing with ubuntu 18 and pip2
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
@@ -32,8 +33,6 @@ PACKAGES=( \
 	matplotlib \
 	numpy \
 	scipy \
-	jupyter \
-	notedown \
 	scikit-image \
 	imageio \
 	imutils \

@@ -33,4 +33,6 @@ alias fetch_pwds=\"scp anton@xi.nuclear.lu.se:/home/anton/Documents/småttogott/
 alias send_pwds=\"scp ~/Documents/Övrigt/Computer/importantos.kdbx anton@xi.nuclear.lu.se:/home/anton/Documents/småttogott/importantos.kdbx\"
 bind 'set completion-ignore-case on'
 
+alias single=\"xrandr --output HDMI-1 --auto; xrandr --output eDP-1 --off\"
+
 "
