@@ -11,6 +11,7 @@ $PACKAGE_INSTALL \
 	python3-tk \
 	python3-pil \
 	python3-pil.imagetk \
+	python3-pypdf2 \
 	ipython \
 	cython3 \
 	python3-launchpadlib \
