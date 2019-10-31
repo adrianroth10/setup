@@ -16,6 +16,7 @@ $PACKAGE_INSTALL \
 	cython3 \
 	python3-launchpadlib \
 	python3-testresources \
+	python3-tqdm \
 
 # Weird thing with ubuntu 18 and pip2
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
@@ -41,7 +42,7 @@ PACKAGES=( \
 	ipywidgets \
 	flake8 \
 	pylint \
-	tqdm \
+	cvxpy \
 	)
 
 #-U means upgrade all packages to the newest available version
