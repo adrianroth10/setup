@@ -6,8 +6,8 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Versions tested see below 
 # see http://www.python36.com/how-to-install-opencv340-on-ubuntu1604/
 
-# VERSION=3.4.0
-VERSION=4.1.0
+VERSION=3.4.0
+# VERSION=4.1.0
 
 if [ "$F" == "f" ] || ! command -v opencv_version ; then
 	#prerequisites

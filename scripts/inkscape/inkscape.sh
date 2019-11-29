@@ -7,6 +7,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 $PACKAGE_INSTALL inkscape pstoedit imagemagick pdf2svg python-gtk2 python-gtksourceview2 gnome-themes-standard
 
+mkdir -p ~/.config/inkscape
 sudo chown -R $USER ~/.config/inkscape
 
 wget https://github.com/textext/textext/releases/download/0.8.1/TexText-Linux-0.8.1.tgz

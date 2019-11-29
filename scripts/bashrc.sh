@@ -22,7 +22,6 @@ alias gca=\"git commit --amend\"
 alias gp=\"git push\"
 
 # extra paths
-export PATH=\"/usr/local/MATLAB/R2017b/bin:\$PATH\"
 export PATH=\"\$HOME/scrum/scrumapp/bin:\$PATH\"
 
 # ROOT aliases
