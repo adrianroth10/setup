@@ -7,6 +7,7 @@ cmake
 imagemagick
 keepassx
 make
+nginx
 owncloud-client
 parallel
 silversearcher-ag
@@ -18,16 +19,9 @@ vim.sh
 spotify.sh
 curl.sh
 haskell.sh
-R.sh
 mutt.sh
-sdl.sh
-pandoc.sh
-apache.sh
 python.sh
 opencv.sh
-mysql.sh
 inkscape.sh
-yaml_cpp.sh
 latex.sh
-java.sh
 tesseract.sh

@@ -51,8 +51,8 @@ set visualbell
 set notimeout ttimeout ttimeoutlen=200
 
 nmap <Leader>f gg=G
-nmap <silent> <C-i> :BufSurfBack<CR>
-nmap <silent> <C-o> :BufSurfForward<CR>
+nmap <silent> <C-p> :BufSurfBack<CR>
+nmap <silent> <C-n> :BufSurfForward<CR>
 autocmd FileType plaintex,tex,json setlocal spell! spelllang=en_gb
 " Toggle spell check
 map <Leader>ts :setlocal spell! spelllang=en_gb<CR>
