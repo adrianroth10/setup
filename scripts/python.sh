@@ -20,9 +20,9 @@ $PACKAGE_INSTALL \
 	python3-tqdm \
 
 # Weird thing with ubuntu 18 and pip2
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-sudo -H python2.7 get-pip.py
-rm get-pip.py
+# curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+# sudo -H python2.7 get-pip.py
+# rm get-pip.py
 
 add_lines ~/.pythonrc.py "import numpy as np
 import matplotlib.pyplot as plt"
@@ -48,7 +48,7 @@ PACKAGES=( \
 	)
 
 #-U means upgrade all packages to the newest available version
-sudo -H pip3 install -U ${PACKAGES[@]}
+pip3 install --user -U ${PACKAGES[@]}
 
 # sudo -H jupyter nbextension enable --py --sys-prefix bqplot
 # sudo -H jupyter nbextension enable --py widgetsnbextension --sys-prefix

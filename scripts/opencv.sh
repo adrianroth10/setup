@@ -6,19 +6,12 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Versions tested see below 
 # see http://www.python36.com/how-to-install-opencv340-on-ubuntu1604/
 
-VERSION=3.4.0
-# VERSION=4.1.0
+# VERSION=3.4.0
+VERSION=4.1.0
 
 if [ "$F" == "f" ] || ! command -v opencv_version ; then
 	#prerequisites
-	$PACKAGE_INSTALL build-essential 
-	$PACKAGE_INSTALL cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
-	$PACKAGE_INSTALL python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-22-dev
-	$PACKAGE_INSTALL libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
-	$PACKAGE_INSTALL libxvidcore-dev libx264-dev
-	$PACKAGE_INSTALL libgtk-3-dev
-	$PACKAGE_INSTALL libatlas-base-dev gfortran pylint
-	$PACKAGE_INSTALL python2.7-dev python3.7-dev
+	$PACKAGE_INSTALL build-essential cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-22-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev libgtk-3-dev libatlas-base-dev gfortran pylint python2.7-dev python3.7-dev
 
 	# Downloading and unziping
 	cd ~
