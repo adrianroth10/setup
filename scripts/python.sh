@@ -27,6 +27,7 @@ import matplotlib.pyplot as plt"
 add_lines ~/.bashrc "# python
 alias python=python3
 export PYTHONSTARTUP=~/.pythonrc.py
+export PATH=\"~/.local/bin:$PATH\"
 "
 
 PACKAGES=( \
