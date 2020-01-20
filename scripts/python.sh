@@ -4,6 +4,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
 $PACKAGE_INSTALL \
+	curl \
 	dvipng \
 	python3 \
 	python3-pip \
@@ -11,6 +12,7 @@ $PACKAGE_INSTALL \
 	python3-tk \
 	python3-pil \
 	python3-pil.imagetk \
+	python3-pypdf2 \
 	ipython \
 	cython3 \
 	python3-launchpadlib \
@@ -18,9 +20,9 @@ $PACKAGE_INSTALL \
 	python3-tqdm \
 
 # Weird thing with ubuntu 18 and pip2
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-sudo -H python2.7 get-pip.py
-rm get-pip.py
+# curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+# sudo -H python2.7 get-pip.py
+# rm get-pip.py
 
 add_lines ~/.pythonrc.py "import numpy as np
 import matplotlib.pyplot as plt"
@@ -43,10 +45,11 @@ PACKAGES=( \
 	flake8 \
 	pylint \
 	cvxpy \
+	trimesh \
 	)
 
 #-U means upgrade all packages to the newest available version
-sudo -H pip3 install -U ${PACKAGES[@]}
+pip3 install --user -U ${PACKAGES[@]}
 
 # sudo -H jupyter nbextension enable --py --sys-prefix bqplot
 # sudo -H jupyter nbextension enable --py widgetsnbextension --sys-prefix

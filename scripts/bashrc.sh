@@ -9,8 +9,6 @@ add_lines ~/.bashrc "function mkcd { dir=\"\$*\"; mkdir -p \"\$dir\" && cd \"\$d
 alias ..=\"cd ..\"
 alias ...=\"cd ../..\"
 alias go=\"xdg-open\"
-alias sprint=\"vim ~/scrum/sprintbacklog*\"
-alias idag=\"vim ~/scrum/idag\"
 alias bt=\"bluetoothctl\"
 alias accio=\"ag\"
 
@@ -20,10 +18,6 @@ alias gc=\"git commit\"
 alias gaa=\"git add -A\"
 alias gca=\"git commit --amend\"
 alias gp=\"git push\"
-
-# extra paths
-export PATH=\"/usr/local/MATLAB/R2017b/bin:\$PATH\"
-export PATH=\"\$HOME/scrum/scrumapp/bin:\$PATH\"
 
 # ROOT aliases
 alias root=\"root -l\"

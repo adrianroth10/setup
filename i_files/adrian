@@ -1,8 +1,4 @@
-arduino
-arduino-mk
-blender
 bluez
-clamtk
 cmake
 imagemagick
 keepassx
@@ -12,16 +8,13 @@ owncloud-client
 parallel
 silversearcher-ag
 stellarium
-unrar
 
 bashrc.sh
 vim.sh
-spotify.sh
-curl.sh
 haskell.sh
-mutt.sh
 python.sh
 opencv.sh
 inkscape.sh
 latex.sh
 tesseract.sh
+# install matlab 

@@ -1,6 +1,5 @@
 #!/bin/bash
-# VERSION="v6-04-18"
-VERSION="v6-08-06"
+VERSION="v6-12-00"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
@@ -51,6 +50,7 @@ if [ "$F" == "f" ] || [ "$F" == "ff" ] ; then
 		libxml2-dev \
 		libkrb5-dev \
 		libgsl0-dev \
+		gfortran \
 		#libroot-graf2d-postscript-dev \
 		#libroot-graf2d-postscript5.34 \
 		#libroot-graf3d-g3d5.34 \
@@ -58,7 +58,6 @@ if [ "$F" == "f" ] || [ "$F" == "ff" ] ; then
 		#libroot-graf3d-eve5.34 \
 		#libroot-graf3d-eve-dev \
 		#libroot-math-physics-dev
-		#gfortran \
 		#libfftw3-dev \ 
 		#libcfitsio-dev \
 		#libqt4-dev-dev \
@@ -88,7 +87,7 @@ if [ "$F" == "f" ] || [ "$F" == "ff" ] ; then
 	#Follow README for build at fixed location
 	mkdir -p root-build
 	cd root-build
-	sudo cmake ../ -Dgnuinstall=ON -Dpython2=ON -Dqtgsi=ON -DCMAKE_INSTALL_PREFIX=/usr/local 
+	sudo cmake ../ -Dgnuinstall=ON -Dpython3=ON -Dqtgsi=ON -DCMAKE_INSTALL_PREFIX=/usr/local 
 	sudo make -j2
 	sudo make install
 	sudo ldconfig -v
