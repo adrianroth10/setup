@@ -44,7 +44,6 @@ PACKAGES=( \
 	ipywidgets \
 	flake8 \
 	pylint \
-	cvxpy \
 	trimesh \
 	)
 
