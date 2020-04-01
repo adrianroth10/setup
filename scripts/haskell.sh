@@ -3,9 +3,9 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
-if [ "$F" == "f" ] || ! command -v stack ; then
-	curl -sSL https://get.haskellstack.org/ | sh -s - -f
-fi
+# if [ "$F" == "f" ] || ! command -v stack ; then
+# 	curl -sSL https://get.haskellstack.org/ | sh -s - -f
+# fi
 $PACKAGE_INSTALL haskell-platform hlint
 add_lines ~/.bashrc "# cabal
 export PATH=\"~/.cabal/bin:\$PATH\"\n"
