@@ -1,5 +1,5 @@
 #!/bin/bash
-# Adding some useful aliases and exports to .bashrc
+# Installing pyrender
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
