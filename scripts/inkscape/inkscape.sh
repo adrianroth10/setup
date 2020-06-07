@@ -11,14 +11,14 @@ $PACKAGE_INSTALL inkscape pstoedit imagemagick pdf2svg python-gtk2 python-gtksou
 mkdir -p ~/.config/inkscape
 sudo chown -R $USER ~/.config/inkscape
 
-VERSION=0.11.0
+VERSION=1.0.1
 RMFILE=TexText-Linux-$VERSION.tar.gz
 LOCAL_DIR=textext-$VERSION
 wget https://github.com/textext/textext/releases/download/$VERSION/$RMFILE
 
 mkdir -p $LOCAL_DIR && tar -xvf $RMFILE
 cd $LOCAL_DIR
-sudo -H python setup.py
+python setup.py
 cd ..
 rm -rf $LOCAL_DIR $RMFILE
 
