@@ -3,10 +3,9 @@ channels:
   - conda-forge
   - defaults
   - damianavila82
-  - costrouc
 dependencies:
   - nodejs
-  - python=3.6.5
+  - python
   - ipykernel
   - ipympl
   - jupyter
@@ -34,3 +33,5 @@ dependencies:
   - pip
   - pip:
     - pyyaml
+    - pysrim
+    - rootpy
