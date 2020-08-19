@@ -5,6 +5,10 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #https://github.com/textext/textext/wiki/Installation-specific-instructions-for-Linux-systems
 #https://textext.github.io/textext/install/linux.html
 #NOTE: it needs python2, and therefore use_conda is implemented.
+#NOTE from inkscape 1.0 python3 is used so conda can be scapped
+
+sudo add-apt-repository -y ppa:inkscape.dev/stable
+$PACKAGE_UPDATE
 
 $PACKAGE_INSTALL inkscape pstoedit imagemagick pdf2svg python-gtk2 python-gtksourceview2 gnome-themes-standard libcanberra-gtk-module
 
