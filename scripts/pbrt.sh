@@ -1,6 +1,6 @@
 #!/bin/bash
 # Physically Based Rendering
-# Adding some useful aliases and exports to .bashrc
+# Does not work (I think)
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 

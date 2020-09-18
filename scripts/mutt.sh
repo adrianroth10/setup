@@ -21,7 +21,7 @@ read -p "What did you call your account? " ACCOUNT
 offlineimap -a $ACCOUNT
 
 add_lines ~/.bashrc "# Neomutt
-export EDITOR=vim
+export EDITOR=nvim
 "
 # add_lines ~/.config/mutt/muttrc "macro index,pager d \"<save-message>=Archive<enter><enter>\" \"Archive\"
 # "

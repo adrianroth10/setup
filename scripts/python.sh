@@ -45,7 +45,6 @@ PACKAGES=( \
 	flake8 \
 	pylint \
 	trimesh \
-	pathos \
 	)
 
 #-U means upgrade all packages to the newest available version

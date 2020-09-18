@@ -3,14 +3,10 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
-add_lines ~/.bashrc "function mkcd { dir=\"\$*\"; mkdir -p \"\$dir\" && cd \"\$dir\"; }
-
-# Aliases
+add_lines ~/.bashrc "#### Aliasesnstuff
 alias ..=\"cd ..\"
 alias ...=\"cd ../..\"
 alias go=\"xdg-open\"
-alias bt=\"bluetoothctl\"
-alias accio=\"ag\"
 
 # Git aliases
 alias gs=\"git status\"
@@ -25,8 +21,10 @@ alias root_valgrind=\"valgrind --tool=memcheck --suppressions=$ROOTSYS/etc/valgr
 
 alias fetch_pwds=\"scp anton@xi.nuclear.lu.se:/home/anton/Documents/småttogott/importantos.kdbx ~/Documents/Övrigt/Computer\"
 alias send_pwds=\"scp ~/Documents/Övrigt/Computer/importantos.kdbx anton@xi.nuclear.lu.se:/home/anton/Documents/småttogott/importantos.kdbx\"
-bind 'set completion-ignore-case on'
 
+# Only use the external monitor
 alias single=\"xrandr --output HDMI-1 --auto; xrandr --output eDP-1 --off\"
+
+alias vim=\"echo 'Do you really want this??'\"
 
 "

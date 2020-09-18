@@ -9,10 +9,7 @@ cd 6714393
 mv github-pandoc.css ~/.github-pandoc.css
 
 add_lines ~/.bashrc '# pandoc function
-function pandoc_html_css {
-	name=${1/.*/.html}
-	pandoc -H ~/.github-pandoc.css \$1 -o $name
-}
+function pandoc_html_css { name=${1/.*/.html}; pandoc -H ~/.github-pandoc.css \$1 -o $name }
 '
 
 #could add another function based on ruby and inlining.

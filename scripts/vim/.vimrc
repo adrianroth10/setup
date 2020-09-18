@@ -9,14 +9,14 @@ call vundle#begin()
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'gerw/vim-latex-suite'
 Plugin 'gmarik/vundle'
-Plugin 'Rename'
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 Plugin 'ton/vim-bufsurf'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plugin 'dense-analysis/ale'
 
 call vundle#end()
 filetype plugin indent on
@@ -30,7 +30,7 @@ nmap <s-enter> O<esc
 "syntastic options
 let g:syntastic_c_config_file = '.syntastic_c_config'
 let g:syntastic_cpp_compiler_options = '-std=c++11'
-let g:syntastic_python_checkers = ['pyflakes']
+" let g:syntastic_python_checkers = ['pyflakes']
 
 "vim-latex-suite
 let g:Tex_DefaultTargetFormat = 'pdf'
