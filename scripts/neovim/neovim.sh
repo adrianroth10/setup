@@ -8,7 +8,7 @@ sudo -H pip3 install pynvim
 # Require prior installation of npm
 sudo npm install --global neovim
 
-mkdir -p ~/.config/nvim
+mkdir -p ~/.config/nvim/spell
 cp $DIR/init.vim ~/.config/nvim/
 
 #### Plugins ####

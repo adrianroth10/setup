@@ -10,3 +10,10 @@ set expandtab                           " Converts tabs to spaces
 " Setting for special filetypes
 autocmd FileType c setlocal noexpandtab shiftwidth=8 tabstop=8
 autocmd FileType python setlocal shiftwidth=4 softtabstop=4
+
+
+" Spell checking
+autocmd FileType plaintex,tex,markdown setlocal spell! spelllang=en_gb
+" Toggle spell check for other files
+map <Leader>ts :setlocal spell! spelllang=en_gb<CR>
+set spellfile=~/.config/nvim/spell/en.utf-8.add
