@@ -9,6 +9,14 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #bash Anaconda3-5.2.0-Linux-x86_64.sh
 #rm Anaconda3-5.2.0-Linux-x86_64.sh
 
+#WARNING:
+#    You currently have a PYTHONPATH environment variable set. This may cause
+#    unexpected behavior when running the Python interpreter in Miniconda3.
+#    For best results, please verify that your PYTHONPATH only points to
+#    directories of packages that are compatible with the Python interpreter
+#    in Miniconda3: /home/anton/miniconda3
+
+
 #This makes it possible to install more packages to the standard anaconda 
 #sudo chown -R $USER ~/anaconda3
 sudo chown -R $USER ~/miniconda3
