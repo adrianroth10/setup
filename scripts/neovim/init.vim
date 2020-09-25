@@ -17,3 +17,5 @@ autocmd FileType plaintex,tex,markdown setlocal spell! spelllang=en_gb
 " Toggle spell check for other files
 map <Leader>ts :setlocal spell! spelllang=en_gb<CR>
 set spellfile=~/.config/nvim/spell/en.utf-8.add
+
+let g:ale_linters = { 'python': ['pyflakes'] }
