@@ -25,6 +25,4 @@ alias send_pwds=\"scp ~/Documents/Övrigt/Computer/importantos.kdbx anton@xi.nuc
 # Only use the external monitor
 alias single=\"xrandr --output HDMI-1 --auto; xrandr --output eDP-1 --off\"
 
-alias vim=\"echo 'Do you really want this??'\"
-
 "
