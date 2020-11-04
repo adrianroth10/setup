@@ -3,12 +3,9 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
-$PACKAGE_INSTALL curl
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-$PACKAGE_INSTALL nodejs
+$PACKAGE_INSTALL nodejs npm
 
-
-# PACKAGES=( \
-#   create-react-app 
-#   )
-# sudo npm install --global ${PACKAGES[@]}
+PACKAGES=( \
+    gltf-pipeline \
+  )
+sudo npm install --global ${PACKAGES[@]}

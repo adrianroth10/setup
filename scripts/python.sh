@@ -4,7 +4,6 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/../extras/functions.sh
 
 $PACKAGE_INSTALL \
-	curl \
 	dvipng \
 	python3 \
 	python3-pip \
@@ -13,21 +12,13 @@ $PACKAGE_INSTALL \
 	python3-pil \
 	python3-pil.imagetk \
 	python3-pypdf2 \
-	ipython \
-	cython3 \
 	python3-launchpadlib \
 	python3-testresources \
 	python3-tqdm \
 
-# Weird thing with ubuntu 18 and pip2
-# curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-# sudo -H python2.7 get-pip.py
-# rm get-pip.py
-
 add_lines ~/.pythonrc.py "import numpy as np
 import matplotlib.pyplot as plt"
 add_lines ~/.bashrc "# python
-alias python=python3
 export PYTHONSTARTUP=~/.pythonrc.py
 export PATH=\"~/.local/bin:$PATH\"
 "

@@ -1,3 +1,16 @@
+call plug#begin('~/.vim/plugged')
+" Ale for linting
+Plug 'dense-analysis/ale'
+
+" Ultisnips for snipping autocompletion
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
+" YouCompleteMe for autocomplete (needs to be built aswell)
+Plug 'valloric/youcompleteme'
+call plug#end()
+
+
 "set smartindent                         " Makes indenting smart
 "set autoindent                          " Good auto indent
 
@@ -21,9 +34,12 @@ set spellfile=~/.config/nvim/spell/en.utf-8.add
 " ale config
 let g:ale_linters = { 'python': ['pyflakes'] }
 
-" vim-latex-suite config
-let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_MultipleCompileFormats = 'pdf, aux'
+" vim-tex config
+" let g:Tex_DefaultTargetFormat = 'pdf'
+" let g:Tex_MultipleCompileFormats = 'pdf, aux'
 let g:tex_flavor = 'latex'
-let g:Tex_Env_figure = "\\begin{figure}[<+htpb+>]\<cr>\\centering\<cr>\\includegraphics[width=.7\\textwidth]{<+file+>}\<cr>\\caption{<+caption text+>}\<cr>\\label{fig:<+label+>}\<cr>\\end{figure}<++>"
+" let g:Tex_Env_figure = "\\begin{figure}[<+htpb+>]\<cr>\\centering\<cr>\\includegraphics[width=.7\\textwidth]{<+file+>}\<cr>\\caption{<+caption text+>}\<cr>\\label{fig:<+label+>}\<cr>\\end{figure}<++>"
 
+" Ultisnips
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsListSnippets="<c-l>"
