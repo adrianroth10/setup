@@ -5,16 +5,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . "$DIR/../extras/functions.sh"
 
 add_lines ~/.bashrc "#### Aliasesnstuff
-alias ..=\"cd ..\"
-alias ...=\"cd ../..\"
 alias go=\"xdg-open\"
-
-# Git aliases
-alias gs=\"git status\"
-alias gc=\"git commit\"
-alias gaa=\"git add -A\"
-alias gca=\"git commit --amend\"
-alias gp=\"git push\"
 
 # ROOT aliases
 alias root=\"root -l\"
