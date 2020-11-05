@@ -1,7 +1,8 @@
 #!/bin/bash
 # Will overwrite your current .vimrc file if any exists
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-. $DIR/../../extras/functions.sh
+# shellcheck source=/dev/null
+. "$DIR/../../extras/functions.sh"
 
 $PACKAGE_INSTALL neovim xsel
 sudo -H pip3 install pynvim
@@ -9,16 +10,21 @@ sudo -H pip3 install pynvim
 sudo npm install --global neovim
 
 mkdir -p ~/.config/nvim/spell
-cp $DIR/init.vim ~/.config/nvim/
+cp "$DIR/init.vim" ~/.config/nvim/
 
 #### Plugins ####
 # Vim-Plug as package manager
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs' \
+      'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 nvim +PlugInstall +qall >/dev/null
 
-# YouCompleteMe (needs to be built)
+# Installing Linters for ale
+$PACKAGE_INSTALL shellcheck
+$PACKAGE_INSTALL lacheck
+pip3 install --user pylint
+
+### Building YouCompleteMe ####
 $PACKAGE_INSTALL build-essential cmake python3-dev dirmngr gnupg apt-transport-https ca-certificates software-properties-common
 
 # install mono-complete
@@ -31,8 +37,10 @@ wget -c https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz -O - | sudo tar -xz
 add_lines ~/.bashrc "# Go compiler
 export PATH=$PATH:/usr/local/go/bin
 "
-source ~/.bashrc
+
+# shellcheck source=/dev/null
+. ~/.bashrc
 
 # compile the plugin
-cd ~/.vim/plugged/youcompleteme
+cd ~/.vim/plugged/youcompleteme || exit
 python3 install.py --all

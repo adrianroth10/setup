@@ -1,7 +1,8 @@
 #!/bin/bash
 # Python 3 with basic packages
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-. $DIR/../extras/functions.sh
+# shellcheck source=/dev/null
+. "$DIR/../extras/functions.sh"
 
 $PACKAGE_INSTALL \
 	dvipng \
@@ -33,13 +34,11 @@ PACKAGES=( \
 	uncertainties \
 	bqplot \
 	ipywidgets \
-	flake8 \
-	pylint \
 	trimesh \
 	)
 
 #-U means upgrade all packages to the newest available version
-pip3 install --user -U ${PACKAGES[@]}
+pip3 install --user -U "${PACKAGES[@]}"
 
 # sudo -H jupyter nbextension enable --py --sys-prefix bqplot
 # sudo -H jupyter nbextension enable --py widgetsnbextension --sys-prefix

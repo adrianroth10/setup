@@ -1,7 +1,8 @@
 #!/bin/bash
 # Adding some useful aliases and exports to .bashrc
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-. $DIR/../extras/functions.sh
+# shellcheck source=/dev/null
+. "$DIR/../extras/functions.sh"
 
 add_lines ~/.bashrc "#### Aliasesnstuff
 alias ..=\"cd ..\"
