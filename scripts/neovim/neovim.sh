@@ -43,3 +43,5 @@ export PATH=/usr/local/go/bin:\$PATH
 # compile the plugin
 cd ~/.vim/plugged/youcompleteme || exit 1
 python3 install.py --all
+# tern problem (see https://github.com/ain/.vim/issues/46#issuecomment-704151014)
+rm -rf third_party/ycmd/third_party/tern_runtime/node_modules
