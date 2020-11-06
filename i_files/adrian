@@ -7,14 +7,13 @@ nginx
 owncloud-client
 parallel
 silversearcher-ag
-stellarium
+blender
+vlc
 
 bashrc.sh
-vim.sh
-haskell.sh
+neovim.sh
 python.sh
 opencv.sh
 inkscape.sh
 latex.sh
 tesseract.sh
-# install matlab 
