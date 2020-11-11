@@ -8,6 +8,9 @@ Plug 'honza/vim-snippets'
 
 " YouCompleteMe for autocomplete (needs to be built aswell)
 Plug 'valloric/youcompleteme'
+
+" Makes python code prettier
+Plug 'psf/black', { 'branch': 'stable' }
 call plug#end()
 
 
