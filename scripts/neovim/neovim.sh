@@ -30,18 +30,20 @@ $PACKAGE_INSTALL build-essential cmake python3-dev dirmngr gnupg apt-transport-h
 # install mono-complete
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
 sudo apt-add-repository 'deb https://download.mono-project.com/repo/ubuntu stable-focal main'
-sudo apt install mono-complete
+$PACKAGE_INSTALL mono-complete
 
 # install go
 wget -c https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
 add_lines ~/.bashrc "# Go compiler
-export PATH=$PATH:/usr/local/go/bin
+export PATH=/usr/local/go/bin:\$PATH
 "
 
 # shellcheck source=/dev/null
 . ~/.bashrc
 
 # compile the plugin
-cd ~/.vim/plugged/youcompleteme || exit
+cd ~/.vim/plugged/youcompleteme || exit 1
 python3 install.py --all
 ###
+# tern problem (see https://github.com/ain/.vim/issues/46#issuecomment-704151014)
+rm -rf third_party/ycmd/third_party/tern_runtime/node_modules
