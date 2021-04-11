@@ -1,4 +1,4 @@
-bluez
+curl
 cmake
 imagemagick
 keepassx
@@ -9,9 +9,7 @@ parallel
 silversearcher-ag
 stellarium
 
-bashrc.sh
-vim.sh
-haskell.sh
+neovim.sh
 python.sh
 opencv.sh
 inkscape.sh

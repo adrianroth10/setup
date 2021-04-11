@@ -1,0 +1,23 @@
+name: base
+channels:
+  - conda-forge
+dependencies:
+  - nodejs
+  - python
+  - ipykernel
+  - ipympl
+  - matplotlib
+  - numpy
+  - scipy
+  - pandas
+  - uncertainties
+  - scikit-learn
+  - scikit-image
+  - pillow
+  - tqdm
+  - pip
+  - py-opencv
+  - imageio
+  - imutils
+  - trimesh
+    #   - pip:
