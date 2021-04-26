@@ -10,3 +10,6 @@ rm Miniconda3-latest-Linux-x86_64.sh
 source /home/adrian/.bashrc
 
 conda env update -f environment_adrian.yml
+
+# to make latex style matplotlib plots work
+$PACKAGE_INSTALL cm-super
