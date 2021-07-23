@@ -21,4 +21,5 @@ dependencies:
   - imageio
   - imutils
   - trimesh
+  - django
     #   - pip:
