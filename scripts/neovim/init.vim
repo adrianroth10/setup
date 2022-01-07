@@ -35,7 +35,12 @@ map <Leader>ts :setlocal spell! spelllang=en_gb<CR>
 set spellfile=~/.config/nvim/spell/en.utf-8.add
 
 " ale config
-let g:ale_linters = { 'python': ['pyflakes'] }
+let g:ale_linters = {
+\  'c': ['clangtidy'],
+\  'cpp': ['clangtidy'],
+\  'python': ['pyflakes'],
+\}
+nmap <silent> <c-e> <Plug>(ale_next_wrap)
 
 " vim-tex config
 " let g:Tex_DefaultTargetFormat = 'pdf'
@@ -44,5 +49,5 @@ let g:tex_flavor = 'latex'
 " let g:Tex_Env_figure = "\\begin{figure}[<+htpb+>]\<cr>\\centering\<cr>\\includegraphics[width=.7\\textwidth]{<+file+>}\<cr>\\caption{<+caption text+>}\<cr>\\label{fig:<+label+>}\<cr>\\end{figure}<++>"
 
 " Ultisnips
-let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsExpandTrigger="<c-h>"
 let g:UltiSnipsListSnippets="<c-l>"
