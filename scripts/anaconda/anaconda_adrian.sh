@@ -12,4 +12,4 @@ source /home/adrian/.bashrc
 conda env update -f environment_adrian.yml
 
 # to make latex style matplotlib plots work
-$PACKAGE_INSTALL cm-super
+$PACKAGE_INSTALL cm-super dvipng
