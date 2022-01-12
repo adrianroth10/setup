@@ -11,5 +11,11 @@ source /home/adrian/.bashrc
 
 conda env update -f environment_adrian.yml
 
+add_lines ~/.pythonrc.py "import numpy as np
+import matplotlib.pyplot as plt"
+add_lines ~/.bashrc "# python
+export PYTHONSTARTUP=~/.pythonrc.py
+"
+
 # to make latex style matplotlib plots work
 $PACKAGE_INSTALL cm-super dvipng
