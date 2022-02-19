@@ -12,7 +12,9 @@ source /home/adrian/.bashrc
 conda env update -f environment_adrian.yml
 
 add_lines ~/.pythonrc.py "import numpy as np
-import matplotlib.pyplot as plt"
+import matplotlib.pyplot as plt
+import cv2
+import pandas as pd"
 add_lines ~/.bashrc "# python
 export PYTHONSTARTUP=~/.pythonrc.py
 "
