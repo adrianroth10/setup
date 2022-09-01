@@ -38,7 +38,7 @@ set spellfile=~/.config/nvim/spell/en.utf-8.add
 let g:ale_linters = {
 \  'c': ['clangtidy'],
 \  'cpp': ['clangtidy'],
-\  'python': ['pyflakes'],
+\  'python': ['flake8'],
 \}
 nmap <silent> <c-e> <Plug>(ale_next_wrap)
 
